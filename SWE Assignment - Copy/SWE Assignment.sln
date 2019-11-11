@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.168
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SWE Assignment", "SWE Assignment\SWE Assignment.csproj", "{CED66914-51E0-4BBF-AE05-E8A1B333C2B5}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CED66914-51E0-4BBF-AE05-E8A1B333C2B5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CED66914-51E0-4BBF-AE05-E8A1B333C2B5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CED66914-51E0-4BBF-AE05-E8A1B333C2B5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CED66914-51E0-4BBF-AE05-E8A1B333C2B5}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E713FE4E-AD1B-48D6-98F2-2076FF63CD15}
+	EndGlobalSection
+EndGlobal
