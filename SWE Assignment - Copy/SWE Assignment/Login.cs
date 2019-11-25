@@ -10,14 +10,14 @@ using System.Windows.Forms;
 
 namespace SWE_Assignment
 {
-    public partial class Form1 : Form
+    public partial class Login : Form
     {
 
         private bool dragging = false;
         private Point offset;
         private Point startPoint = new Point(0, 0);
 
-        public Form1()
+        public Login()
         {
             InitializeComponent();
             password_txt.PasswordChar = '*';

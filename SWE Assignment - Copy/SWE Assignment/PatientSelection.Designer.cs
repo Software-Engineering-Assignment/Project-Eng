@@ -64,7 +64,7 @@
             this.label1.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(43, 19);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(124, 19);
+            this.label1.Size = new System.Drawing.Size(152, 24);
             this.label1.TabIndex = 15;
             this.label1.Text = "Patient Selection";
             // 
@@ -110,6 +110,7 @@
             this.button8.Text = "Bedside No8";
             this.button8.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
             this.button8.UseVisualStyleBackColor = false;
+            this.button8.Click += new System.EventHandler(this.button8_Click);
             // 
             // panel7
             // 
@@ -137,6 +138,7 @@
             this.button7.Text = "Bedside No7";
             this.button7.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
             this.button7.UseVisualStyleBackColor = false;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
             // 
             // panel6
             // 
@@ -164,6 +166,7 @@
             this.button6.Text = "Bedside No6";
             this.button6.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
             this.button6.UseVisualStyleBackColor = false;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
             // panel5
             // 
@@ -191,6 +194,7 @@
             this.button5.Text = "Bedside No5";
             this.button5.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
             this.button5.UseVisualStyleBackColor = false;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // panel4
             // 
@@ -218,6 +222,7 @@
             this.button4.Text = "Bedside No4";
             this.button4.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
             this.button4.UseVisualStyleBackColor = false;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // panel3
             // 
@@ -245,6 +250,7 @@
             this.button3.Text = "Bedside No3";
             this.button3.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
             this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // panel2
             // 
@@ -272,6 +278,7 @@
             this.button2.Text = "Bedside No2";
             this.button2.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
             this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // panel1
             // 
@@ -302,9 +309,9 @@
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // Form2
+            // PatientSelection
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 14F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(820, 417);
             this.Controls.Add(this.label1);
@@ -320,7 +327,7 @@
             this.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.MaximizeBox = false;
-            this.Name = "Form2";
+            this.Name = "PatientSelection";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form2";
             this.Load += new System.EventHandler(this.Form2_Load);

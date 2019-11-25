@@ -16,7 +16,7 @@ namespace SWE_Assignment
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new ManagementMenu());
+            Application.Run(new Login());
         }
     }
 }

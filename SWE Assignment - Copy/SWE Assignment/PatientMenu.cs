@@ -15,6 +15,7 @@ namespace SWE_Assignment
         public PatientMenu()
         {
             InitializeComponent();
+            label1.Text = PatientSelection.labelText;
             panel14.Location = new Point(0, 0);
             panel9.Location = new Point(0, 0);
             panel8.Location = new Point(0, 0);
