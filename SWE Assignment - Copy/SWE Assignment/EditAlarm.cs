@@ -15,6 +15,9 @@ namespace SWE_Assignment
         public EditAlarm()
         {
             InitializeComponent();
+            panel8.Location = new Point(0, 0);
+            panel9.Location = new Point(0, 0);
+            panel10.Location = new Point(0, 0); 
             panel2.Visible = true;
             panel3.Visible = true;
             panel4.Visible = true;
