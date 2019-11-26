@@ -118,7 +118,7 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="pictureBox4.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="TemperaturePictureBox.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAARdJREFUSEvd
         1ElOAzEURdESEswABfZFG9gS3TJolgSEZgI7AMbAvVJlEj9XN8yTjhRR/zuF/eNm7bOFczzgGT8tP/s3
@@ -128,7 +128,7 @@
         g67rZRzPIWfygkNMigfvRHi3POG79QhH0WfWrG2a5h/z0AWFzjb+twAAAABJRU5ErkJggg==
 </value>
   </data>
-  <data name="pictureBox3.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="BreathingRatePictureBox.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAARdJREFUSEvd
         1ElOAzEURdESEswABfZFG9gS3TJolgSEZgI7AMbAvVJlEj9XN8yTjhRR/zuF/eNm7bOFczzgGT8tP/s3
@@ -138,7 +138,7 @@
         g67rZRzPIWfygkNMigfvRHi3POG79QhH0WfWrG2a5h/z0AWFzjb+twAAAABJRU5ErkJggg==
 </value>
   </data>
-  <data name="pictureBox2.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="BloodPressurePictureBox.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAARdJREFUSEvd
         1ElOAzEURdESEswABfZFG9gS3TJolgSEZgI7AMbAvVJlEj9XN8yTjhRR/zuF/eNm7bOFczzgGT8tP/s3
@@ -148,7 +148,7 @@
         g67rZRzPIWfygkNMigfvRHi3POG79QhH0WfWrG2a5h/z0AWFzjb+twAAAABJRU5ErkJggg==
 </value>
   </data>
-  <data name="pictureBox1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="PulseRatePicturebox.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAAZdJREFUSEvd
         VctOwkAUbVzIt9UWpgaRCHuM/oQLDHsh/oCgCx5t48KFfID4AbBEReM36KqeW28ztNxC2yUnOaGZnnMG
@@ -160,4 +160,7 @@
         U2FcbQQl6asP3MJVtuUDNSucLtwtCFuC4V8mPdMoIvgstaF7AsP4A5plO5c6D4myAAAAAElFTkSuQmCC
 </value>
   </data>
+  <metadata name="openFileDialog1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
 </root>
