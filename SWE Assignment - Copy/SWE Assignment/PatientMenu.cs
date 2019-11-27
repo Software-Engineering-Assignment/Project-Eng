@@ -156,6 +156,7 @@ namespace SWE_Assignment
         {
             PulseRatePicturebox.Image = Properties.Resources.connection_status_on;
             pulseRateOn = true;
+
             
         }
 
@@ -243,6 +244,7 @@ namespace SWE_Assignment
                 return null;
         }
 
+        
         private void PatientDateofBirthBox_TextChanged(object sender, EventArgs e)
         {
 

@@ -3,14 +3,16 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Threading;
 
 namespace SWE_Assignment
 {
+
     
     class Patient
     {
-       
-        
+        public static int pulseRate;
+
         private static string patientName;
         private static string patientLastname;
         private static string patientGender;
@@ -44,7 +46,25 @@ namespace SWE_Assignment
             PatientMenu.getPatientWeight = patientWeight + " Kg";
            
         }
+
+        public int PulseRate()
+        {
+           // int ourRnd;
+            Random rnd = new Random();
+            //System.Timers.Timer t = new System.Timers.Timer(1000);
+            bool start = PatientMenu.pulseRateOn;
+            while (start == true)
+            {
+                 pulseRate = rnd.Next(EditAlarm.plLowerLimit - 10, EditAlarm.plUpperLimit + 10);
+                 Thread.Sleep(2000);
+                return pulseRate; 
+            }
+
+            return 0;
+
+        }
     }
 
+    
     
 }
