@@ -25,7 +25,6 @@ namespace SWE_Assignment
             //Codes to get stuff from database?
             patientName = "Shayan";
             PatientMenu.getPatientName = patientName;
-            
 
             //code to get lastname
             patientLastname = "MHD";

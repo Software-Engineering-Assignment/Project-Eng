@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Threading;
 
 namespace SWE_Assignment
 {
@@ -21,8 +22,9 @@ namespace SWE_Assignment
         public static DateTime getPetientBD;
         public static string getPatientHeight;
         public static string getPatientWeight;
+        public static string update;
 
-        private bool pulseRateOn = false;
+        public static bool pulseRateOn = false;
         private bool bloodPressureOn = false;
         private bool breathingRateOn = false;
         private bool temperatureOn = false;
@@ -149,17 +151,19 @@ namespace SWE_Assignment
             }
             
         }
-
+        
         private void button6_Click(object sender, EventArgs e)
         {
             PulseRatePicturebox.Image = Properties.Resources.connection_status_on;
             pulseRateOn = true;
+            
         }
 
         private void PulseRateOffButton_Click(object sender, EventArgs e)
         {
             PulseRatePicturebox.Image = Properties.Resources.connection_status_off;
             pulseRateOn = false;
+            PulseRateMonitortingBox.Text = null;
         }
 
         private void BloodPressureOnButton_Click(object sender, EventArgs e)
@@ -223,10 +227,25 @@ namespace SWE_Assignment
 
         private void ReadFromCsvButton_Click(object sender, EventArgs e)
         {
-            openFileDialog1.ShowDialog();
-            string filename = openFileDialog1.FileName;
-            string readfile = File.ReadAllText(filename);
-            richTextBox1.Text = readfile;
+            RichBoxPopulator();   
+        }
+
+        private string RichBoxPopulator()
+        {
+            DialogResult result = openFileDialog1.ShowDialog();
+            if (result == DialogResult.OK)
+            {
+                string filename = openFileDialog1.FileName;
+                string readfile = File.ReadAllText(filename); 
+                return richTextBox1.Text = readfile;
+            }
+            else
+                return null;
+        }
+
+        private void PatientDateofBirthBox_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

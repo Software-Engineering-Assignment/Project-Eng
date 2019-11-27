@@ -12,9 +12,26 @@ namespace SWE_Assignment
 {
     public partial class EditAlarm : Form
     {
+        private static int btClicked = 0;
+        public static int plLowerLimit = 90;
+        public static int plUpperLimit = 120;
+        public static int bpUpperLimit;
+        public static int bpLowerLimit;
+        public static int brUpperLimit;
+        public static int brLowerLimit;
+        public static int tUpperLimit;
+        public static int tLowerLimit;
+        private int lowerLimit;
+        private int upperLimit;
+        private static string text;
+
         public EditAlarm()
         {
             InitializeComponent();
+            CurrentPulseRateBox.Text = plLowerLimit.ToString() + "   " + plUpperLimit.ToString();
+            CurrentBloodPressureBox.Text = bpLowerLimit.ToString() + "   " + bpUpperLimit.ToString();
+            CurrentBreathingRateBox.Text = brLowerLimit.ToString() + "   " + brUpperLimit.ToString();
+            CurrentTemperatureBox.Text = tLowerLimit.ToString() + "   " + tUpperLimit.ToString();
             panel8.Location = new Point(0, 0);
             panel9.Location = new Point(0, 0);
             panel10.Location = new Point(0, 0); 
@@ -43,6 +60,14 @@ namespace SWE_Assignment
             panel8.Visible = false;
             panel9.Visible = false;
             panel10.Visible = false;
+            LowerLimitBloodPressureBox.Clear();
+            UpperLimitBloodPressureBox.Clear();
+            LowerLimitBreathingRateBox.Clear();
+            UpperLimitBreathingRateBox.Clear();
+            LowerLimitTemperatureBox.Clear();
+            UpperLimitTemperatureBox.Clear();
+            text = null;
+
 
         }
 
@@ -58,7 +83,13 @@ namespace SWE_Assignment
             panel8.BringToFront();
             panel9.Visible = false;
             panel10.Visible = false;
-
+            LowerLimitPulseRateBox.Clear();
+            UpperLimitPulseRateBox.Clear();
+            LowerLimitBreathingRateBox.Clear();
+            UpperLimitBreathingRateBox.Clear();
+            LowerLimitTemperatureBox.Clear();
+            UpperLimitTemperatureBox.Clear();
+            text = null;
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -73,7 +104,13 @@ namespace SWE_Assignment
             panel9.Visible = true;
             panel9.BringToFront();
             panel10.Visible = false;
-
+            LowerLimitPulseRateBox.Clear();
+            UpperLimitPulseRateBox.Clear();
+            LowerLimitBloodPressureBox.Clear();
+            UpperLimitBloodPressureBox.Clear();
+            LowerLimitTemperatureBox.Clear();
+            UpperLimitTemperatureBox.Clear();
+            text = null;
         }
 
         private void button4_Click(object sender, EventArgs e)
@@ -88,6 +125,13 @@ namespace SWE_Assignment
             panel9.Visible = true;
             panel10.Visible = true;
             panel10.BringToFront();
+            LowerLimitPulseRateBox.Clear();
+            UpperLimitPulseRateBox.Clear();
+            LowerLimitBloodPressureBox.Clear();
+            UpperLimitBloodPressureBox.Clear();
+            LowerLimitBreathingRateBox.Clear();
+            UpperLimitBreathingRateBox.Clear();
+            text = null;
 
         }
 
@@ -99,10 +143,131 @@ namespace SWE_Assignment
             panel5.Visible = false;
             panel6.Visible = true;
             panel7.Visible = false;
+            LowerLimitPulseRateBox.Clear();
+            UpperLimitPulseRateBox.Clear();
+            LowerLimitBloodPressureBox.Clear();
+            UpperLimitBloodPressureBox.Clear();
+            LowerLimitBreathingRateBox.Clear();
+            UpperLimitBreathingRateBox.Clear();
+            LowerLimitTemperatureBox.Clear();
+            UpperLimitTemperatureBox.Clear();
             this.Hide();
             PatientMenu f9 = new PatientMenu();
             f9.Show();
 
         }
+
+        private void SavePulseRateLimitButton_Click(object sender, EventArgs e)
+        {
+            btClicked = 1;
+            CurrentTextBoxUpdater();
+            //MessageBox.Show(plLowerLimit.ToString(), "Yikes", MessageBoxButtons.OK);
+            //MessageBox.Show(plUpperLimit.ToString(), "Yikes 2.0", MessageBoxButtons.OK);
+            LowerLimitPulseRateBox.Clear();
+            UpperLimitPulseRateBox.Clear();
+            
+        }
+
+        private void SaveBloodPressureLimitButton_Click(object sender, EventArgs e)
+        {
+            btClicked = 2;
+            CurrentTextBoxUpdater();
+            LowerLimitBloodPressureBox.Clear();
+            UpperLimitBloodPressureBox.Clear();
+        }
+
+        private void SaveBreathingRateLimitButton_Click(object sender, EventArgs e)
+        {
+            btClicked = 3;
+            CurrentTextBoxUpdater();
+            LowerLimitBreathingRateBox.Clear();
+            UpperLimitBreathingRateBox.Clear();
+
+        }
+
+        private void SaveTemperatureLimitButton_Click(object sender, EventArgs e)
+        {
+            btClicked = 4;
+            CurrentTextBoxUpdater();
+            LowerLimitTemperatureBox.Clear();
+            UpperLimitTemperatureBox.Clear();
+        }
+
+        private void CurrentTextBoxUpdater()
+        {
+            switch (btClicked)
+            {
+                case 1:
+                    TryToParse(LowerLimitPulseRateBox.Text, UpperLimitPulseRateBox.Text);
+                    CurrentPulseRateBox.Text = text;
+                    break;
+                case 2:
+                    TryToParse(LowerLimitBloodPressureBox.Text, UpperLimitBloodPressureBox.Text);
+                    CurrentBloodPressureBox.Text = text;
+                    break;
+                case 3:
+                    TryToParse(LowerLimitBreathingRateBox.Text, UpperLimitBreathingRateBox.Text);
+                    CurrentBreathingRateBox.Text = text; 
+                    break;
+                case 4:
+                    TryToParse(LowerLimitTemperatureBox.Text, UpperLimitTemperatureBox.Text);
+                    CurrentTemperatureBox.Text = text;
+                    break;
+            }
+        }
+
+        private string TryToParse(string a, string b)
+        {
+            
+            bool result1 = Int32.TryParse(a, out lowerLimit);
+            bool result2 = Int32.TryParse(b, out upperLimit);
+
+            if (result1 == false || result2 == false)
+            {
+                MessageBox.Show("Please enter valid numbers", "invalid input", MessageBoxButtons.OK);
+                return null;
+
+            } else if (lowerLimit >= upperLimit)
+            {
+                MessageBox.Show("Please Make sure lower limit is smaller than upper limit", "invalid input", MessageBoxButtons.OK);
+                return null;
+            } else
+            {
+                text = lowerLimit.ToString() + "      " + upperLimit.ToString();
+                SetLimitValues();
+                return text;
+            }
+
+        }
+
+        private void SetLimitValues()
+        {
+
+                switch (btClicked)
+                {
+                    case 1:
+                        Int32.TryParse(LowerLimitPulseRateBox.Text, out plLowerLimit);
+                        Int32.TryParse(UpperLimitPulseRateBox.Text, out plUpperLimit);
+                    break;
+                    case 2:
+                        Int32.TryParse(LowerLimitBloodPressureBox.Text, out bpLowerLimit);
+                        Int32.TryParse(UpperLimitBloodPressureBox.Text, out bpUpperLimit);
+                        break;
+                    case 3:
+                        Int32.TryParse(LowerLimitBreathingRateBox.Text, out brLowerLimit);
+                        Int32.TryParse(UpperLimitBreathingRateBox.Text, out brLowerLimit);
+                        break;
+                    case 4:
+                        Int32.TryParse(LowerLimitTemperatureBox.Text, out tLowerLimit);
+                        Int32.TryParse(UpperLimitTemperatureBox.Text, out tUpperLimit);
+                        break;
+
+                }
+
+            
+
+        } 
+
+     //a method to regonizes our limit violation and raise a number to alert user;
     }
 }
