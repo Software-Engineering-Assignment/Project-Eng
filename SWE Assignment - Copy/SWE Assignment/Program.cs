@@ -16,6 +16,7 @@ namespace SWE_Assignment
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
+            string kk = Properties.Settings.Default.Con;
             Application.Run(new Login());
         }
     }

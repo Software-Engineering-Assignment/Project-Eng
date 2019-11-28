@@ -40,43 +40,51 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.PulseRateButton = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.panel7 = new System.Windows.Forms.Panel();
-            this.LowerLimitPulseRateBox = new System.Windows.Forms.TextBox();
-            this.label10 = new System.Windows.Forms.Label();
-            this.panel8 = new System.Windows.Forms.Panel();
-            this.LowerLimitBloodPressureBox = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.UpperLimitBloodPressureBox = new System.Windows.Forms.TextBox();
-            this.CurrentBloodPressureBox = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.panel9 = new System.Windows.Forms.Panel();
-            this.LowerLimitBreathingRateBox = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.UpperLimitBreathingRateBox = new System.Windows.Forms.TextBox();
-            this.CurrentBreathingRateBox = new System.Windows.Forms.TextBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.panel10 = new System.Windows.Forms.Panel();
-            this.LowerLimitTemperatureBox = new System.Windows.Forms.TextBox();
-            this.label8 = new System.Windows.Forms.Label();
-            this.UpperLimitTemperatureBox = new System.Windows.Forms.TextBox();
-            this.CurrentTemperatureBox = new System.Windows.Forms.TextBox();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
-            this.SaveTemperatureLimitButton = new System.Windows.Forms.Button();
-            this.SaveBreathingRateLimitButton = new System.Windows.Forms.Button();
-            this.SaveBloodPressureLimitButton = new System.Windows.Forms.Button();
+            this.PulseRatePanel = new System.Windows.Forms.Panel();
+            this.ulp = new System.Windows.Forms.Label();
+            this.llp = new System.Windows.Forms.Label();
+            this.cpl = new System.Windows.Forms.Label();
             this.SavePulseRateLimitButton = new System.Windows.Forms.Button();
             this.UpperLimitPulseRateBox = new System.Windows.Forms.TextBox();
+            this.LowerLimitPulseRateBox = new System.Windows.Forms.TextBox();
             this.CurrentPulseRateBox = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.BloodPressurePanle = new System.Windows.Forms.Panel();
+            this.ulbp = new System.Windows.Forms.Label();
+            this.llbp = new System.Windows.Forms.Label();
+            this.cbp = new System.Windows.Forms.Label();
+            this.SaveBloodPressureLimitButton = new System.Windows.Forms.Button();
+            this.UpperLimitBloodPressureBox = new System.Windows.Forms.TextBox();
+            this.LowerLimitBloodPressureBox = new System.Windows.Forms.TextBox();
+            this.CurrentBloodPressureBox = new System.Windows.Forms.TextBox();
+            this.BreathingRatePanel = new System.Windows.Forms.Panel();
+            this.panel7 = new System.Windows.Forms.Panel();
+            this.ulbr = new System.Windows.Forms.Label();
+            this.llbr = new System.Windows.Forms.Label();
+            this.cbr = new System.Windows.Forms.Label();
+            this.SaveBreathingRateLimitButton = new System.Windows.Forms.Button();
+            this.UpperLimitBreathingRateBox = new System.Windows.Forms.TextBox();
+            this.LowerLimitBreathingRateBox = new System.Windows.Forms.TextBox();
+            this.CurrentBreathingRateBox = new System.Windows.Forms.TextBox();
+            this.TemperaturePanel = new System.Windows.Forms.Panel();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.ct = new System.Windows.Forms.Label();
+            this.SaveTemperatureLimitButton = new System.Windows.Forms.Button();
+            this.UpperLimitTemperatureBox = new System.Windows.Forms.TextBox();
+            this.LowerLimitTemperatureBox = new System.Windows.Forms.TextBox();
+            this.CurrentTemperatureBox = new System.Windows.Forms.TextBox();
+            this.panel8 = new System.Windows.Forms.Panel();
+            this.panel9 = new System.Windows.Forms.Panel();
+            this.panel10 = new System.Windows.Forms.Panel();
+            this.panel11 = new System.Windows.Forms.Panel();
+            this.panel12 = new System.Windows.Forms.Panel();
+            this.panel13 = new System.Windows.Forms.Panel();
+            this.panel14 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
-            this.panel7.SuspendLayout();
-            this.panel8.SuspendLayout();
-            this.panel9.SuspendLayout();
-            this.panel10.SuspendLayout();
+            this.PulseRatePanel.SuspendLayout();
+            this.BloodPressurePanle.SuspendLayout();
+            this.BreathingRatePanel.SuspendLayout();
+            this.TemperaturePanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel6
@@ -218,342 +226,443 @@
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(239, 513);
+            this.panel1.Size = new System.Drawing.Size(239, 455);
             this.panel1.TabIndex = 19;
             // 
-            // panel7
+            // PulseRatePanel
             // 
-            this.panel7.Controls.Add(this.LowerLimitPulseRateBox);
-            this.panel7.Controls.Add(this.label10);
-            this.panel7.Controls.Add(this.panel8);
-            this.panel7.Controls.Add(this.SavePulseRateLimitButton);
-            this.panel7.Controls.Add(this.UpperLimitPulseRateBox);
-            this.panel7.Controls.Add(this.CurrentPulseRateBox);
-            this.panel7.Controls.Add(this.label3);
-            this.panel7.Controls.Add(this.label2);
-            this.panel7.Location = new System.Drawing.Point(275, 0);
-            this.panel7.Margin = new System.Windows.Forms.Padding(4);
-            this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(803, 514);
-            this.panel7.TabIndex = 25;
+            this.PulseRatePanel.Controls.Add(this.panel10);
+            this.PulseRatePanel.Controls.Add(this.panel9);
+            this.PulseRatePanel.Controls.Add(this.ulp);
+            this.PulseRatePanel.Controls.Add(this.llp);
+            this.PulseRatePanel.Controls.Add(this.cpl);
+            this.PulseRatePanel.Controls.Add(this.SavePulseRateLimitButton);
+            this.PulseRatePanel.Controls.Add(this.UpperLimitPulseRateBox);
+            this.PulseRatePanel.Controls.Add(this.LowerLimitPulseRateBox);
+            this.PulseRatePanel.Controls.Add(this.CurrentPulseRateBox);
+            this.PulseRatePanel.Location = new System.Drawing.Point(425, 150);
+            this.PulseRatePanel.Name = "PulseRatePanel";
+            this.PulseRatePanel.Size = new System.Drawing.Size(389, 190);
+            this.PulseRatePanel.TabIndex = 25;
             // 
-            // LowerLimitPulseRateBox
+            // ulp
             // 
-            this.LowerLimitPulseRateBox.Location = new System.Drawing.Point(420, 244);
-            this.LowerLimitPulseRateBox.Margin = new System.Windows.Forms.Padding(4);
-            this.LowerLimitPulseRateBox.Name = "LowerLimitPulseRateBox";
-            this.LowerLimitPulseRateBox.Size = new System.Drawing.Size(132, 22);
-            this.LowerLimitPulseRateBox.TabIndex = 7;
+            this.ulp.AutoSize = true;
+            this.ulp.Location = new System.Drawing.Point(42, 100);
+            this.ulp.Name = "ulp";
+            this.ulp.Size = new System.Drawing.Size(80, 17);
+            this.ulp.TabIndex = 6;
+            this.ulp.Text = "Upper Limit";
             // 
-            // label10
+            // llp
             // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(251, 247);
-            this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(79, 17);
-            this.label10.TabIndex = 6;
-            this.label10.Text = "Lower Limit";
+            this.llp.AutoSize = true;
+            this.llp.Location = new System.Drawing.Point(42, 63);
+            this.llp.Name = "llp";
+            this.llp.Size = new System.Drawing.Size(79, 17);
+            this.llp.TabIndex = 5;
+            this.llp.Text = "Lower Limit";
             // 
-            // panel8
+            // cpl
             // 
-            this.panel8.Controls.Add(this.LowerLimitBloodPressureBox);
-            this.panel8.Controls.Add(this.label4);
-            this.panel8.Controls.Add(this.UpperLimitBloodPressureBox);
-            this.panel8.Controls.Add(this.CurrentBloodPressureBox);
-            this.panel8.Controls.Add(this.label5);
-            this.panel8.Controls.Add(this.label11);
-            this.panel8.Controls.Add(this.panel9);
-            this.panel8.Controls.Add(this.SaveBloodPressureLimitButton);
-            this.panel8.Location = new System.Drawing.Point(20, 22);
-            this.panel8.Margin = new System.Windows.Forms.Padding(4);
-            this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(803, 514);
-            this.panel8.TabIndex = 5;
-            // 
-            // LowerLimitBloodPressureBox
-            // 
-            this.LowerLimitBloodPressureBox.Location = new System.Drawing.Point(420, 244);
-            this.LowerLimitBloodPressureBox.Margin = new System.Windows.Forms.Padding(4);
-            this.LowerLimitBloodPressureBox.Name = "LowerLimitBloodPressureBox";
-            this.LowerLimitBloodPressureBox.Size = new System.Drawing.Size(132, 22);
-            this.LowerLimitBloodPressureBox.TabIndex = 13;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(251, 247);
-            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(79, 17);
-            this.label4.TabIndex = 12;
-            this.label4.Text = "Lower Limit";
-            // 
-            // UpperLimitBloodPressureBox
-            // 
-            this.UpperLimitBloodPressureBox.Location = new System.Drawing.Point(420, 305);
-            this.UpperLimitBloodPressureBox.Margin = new System.Windows.Forms.Padding(4);
-            this.UpperLimitBloodPressureBox.Name = "UpperLimitBloodPressureBox";
-            this.UpperLimitBloodPressureBox.Size = new System.Drawing.Size(132, 22);
-            this.UpperLimitBloodPressureBox.TabIndex = 11;
-            // 
-            // CurrentBloodPressureBox
-            // 
-            this.CurrentBloodPressureBox.Location = new System.Drawing.Point(420, 186);
-            this.CurrentBloodPressureBox.Margin = new System.Windows.Forms.Padding(4);
-            this.CurrentBloodPressureBox.Name = "CurrentBloodPressureBox";
-            this.CurrentBloodPressureBox.ReadOnly = true;
-            this.CurrentBloodPressureBox.Size = new System.Drawing.Size(132, 22);
-            this.CurrentBloodPressureBox.TabIndex = 10;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(251, 314);
-            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(80, 17);
-            this.label5.TabIndex = 9;
-            this.label5.Text = "Upper Limit";
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(251, 186);
-            this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(156, 17);
-            this.label11.TabIndex = 8;
-            this.label11.Text = "Current Blood Pressure";
-            // 
-            // panel9
-            // 
-            this.panel9.Controls.Add(this.LowerLimitBreathingRateBox);
-            this.panel9.Controls.Add(this.label6);
-            this.panel9.Controls.Add(this.UpperLimitBreathingRateBox);
-            this.panel9.Controls.Add(this.CurrentBreathingRateBox);
-            this.panel9.Controls.Add(this.label7);
-            this.panel9.Controls.Add(this.label12);
-            this.panel9.Controls.Add(this.panel10);
-            this.panel9.Controls.Add(this.SaveBreathingRateLimitButton);
-            this.panel9.Location = new System.Drawing.Point(27, 39);
-            this.panel9.Margin = new System.Windows.Forms.Padding(4);
-            this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(803, 514);
-            this.panel9.TabIndex = 5;
-            // 
-            // LowerLimitBreathingRateBox
-            // 
-            this.LowerLimitBreathingRateBox.Location = new System.Drawing.Point(420, 244);
-            this.LowerLimitBreathingRateBox.Margin = new System.Windows.Forms.Padding(4);
-            this.LowerLimitBreathingRateBox.Name = "LowerLimitBreathingRateBox";
-            this.LowerLimitBreathingRateBox.Size = new System.Drawing.Size(132, 22);
-            this.LowerLimitBreathingRateBox.TabIndex = 13;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(251, 247);
-            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(79, 17);
-            this.label6.TabIndex = 12;
-            this.label6.Text = "Lower Limit";
-            // 
-            // UpperLimitBreathingRateBox
-            // 
-            this.UpperLimitBreathingRateBox.Location = new System.Drawing.Point(420, 305);
-            this.UpperLimitBreathingRateBox.Margin = new System.Windows.Forms.Padding(4);
-            this.UpperLimitBreathingRateBox.Name = "UpperLimitBreathingRateBox";
-            this.UpperLimitBreathingRateBox.Size = new System.Drawing.Size(132, 22);
-            this.UpperLimitBreathingRateBox.TabIndex = 11;
-            // 
-            // CurrentBreathingRateBox
-            // 
-            this.CurrentBreathingRateBox.Location = new System.Drawing.Point(420, 186);
-            this.CurrentBreathingRateBox.Margin = new System.Windows.Forms.Padding(4);
-            this.CurrentBreathingRateBox.Name = "CurrentBreathingRateBox";
-            this.CurrentBreathingRateBox.ReadOnly = true;
-            this.CurrentBreathingRateBox.Size = new System.Drawing.Size(132, 22);
-            this.CurrentBreathingRateBox.TabIndex = 10;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(251, 314);
-            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(80, 17);
-            this.label7.TabIndex = 9;
-            this.label7.Text = "Upper Limit";
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(251, 186);
-            this.label12.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(159, 17);
-            this.label12.TabIndex = 8;
-            this.label12.Text = "Current Brearthing Rate";
-            // 
-            // panel10
-            // 
-            this.panel10.Controls.Add(this.LowerLimitTemperatureBox);
-            this.panel10.Controls.Add(this.label8);
-            this.panel10.Controls.Add(this.UpperLimitTemperatureBox);
-            this.panel10.Controls.Add(this.CurrentTemperatureBox);
-            this.panel10.Controls.Add(this.label9);
-            this.panel10.Controls.Add(this.label13);
-            this.panel10.Controls.Add(this.SaveTemperatureLimitButton);
-            this.panel10.Location = new System.Drawing.Point(24, 25);
-            this.panel10.Margin = new System.Windows.Forms.Padding(4);
-            this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(803, 514);
-            this.panel10.TabIndex = 5;
-            // 
-            // LowerLimitTemperatureBox
-            // 
-            this.LowerLimitTemperatureBox.Location = new System.Drawing.Point(420, 244);
-            this.LowerLimitTemperatureBox.Margin = new System.Windows.Forms.Padding(4);
-            this.LowerLimitTemperatureBox.Name = "LowerLimitTemperatureBox";
-            this.LowerLimitTemperatureBox.Size = new System.Drawing.Size(132, 22);
-            this.LowerLimitTemperatureBox.TabIndex = 13;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(251, 247);
-            this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(79, 17);
-            this.label8.TabIndex = 12;
-            this.label8.Text = "Lower Limit";
-            // 
-            // UpperLimitTemperatureBox
-            // 
-            this.UpperLimitTemperatureBox.Location = new System.Drawing.Point(420, 305);
-            this.UpperLimitTemperatureBox.Margin = new System.Windows.Forms.Padding(4);
-            this.UpperLimitTemperatureBox.Name = "UpperLimitTemperatureBox";
-            this.UpperLimitTemperatureBox.Size = new System.Drawing.Size(132, 22);
-            this.UpperLimitTemperatureBox.TabIndex = 11;
-            // 
-            // CurrentTemperatureBox
-            // 
-            this.CurrentTemperatureBox.Location = new System.Drawing.Point(420, 186);
-            this.CurrentTemperatureBox.Margin = new System.Windows.Forms.Padding(4);
-            this.CurrentTemperatureBox.Name = "CurrentTemperatureBox";
-            this.CurrentTemperatureBox.ReadOnly = true;
-            this.CurrentTemperatureBox.Size = new System.Drawing.Size(132, 22);
-            this.CurrentTemperatureBox.TabIndex = 10;
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(251, 314);
-            this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(80, 17);
-            this.label9.TabIndex = 9;
-            this.label9.Text = "Upper Limit";
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(251, 186);
-            this.label13.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(141, 17);
-            this.label13.TabIndex = 8;
-            this.label13.Text = "Current Temperature";
-            // 
-            // SaveTemperatureLimitButton
-            // 
-            this.SaveTemperatureLimitButton.Location = new System.Drawing.Point(699, 470);
-            this.SaveTemperatureLimitButton.Margin = new System.Windows.Forms.Padding(4);
-            this.SaveTemperatureLimitButton.Name = "SaveTemperatureLimitButton";
-            this.SaveTemperatureLimitButton.Size = new System.Drawing.Size(100, 28);
-            this.SaveTemperatureLimitButton.TabIndex = 4;
-            this.SaveTemperatureLimitButton.Text = "Save";
-            this.SaveTemperatureLimitButton.UseVisualStyleBackColor = true;
-            this.SaveTemperatureLimitButton.Click += new System.EventHandler(this.SaveTemperatureLimitButton_Click);
-            // 
-            // SaveBreathingRateLimitButton
-            // 
-            this.SaveBreathingRateLimitButton.Location = new System.Drawing.Point(699, 470);
-            this.SaveBreathingRateLimitButton.Margin = new System.Windows.Forms.Padding(4);
-            this.SaveBreathingRateLimitButton.Name = "SaveBreathingRateLimitButton";
-            this.SaveBreathingRateLimitButton.Size = new System.Drawing.Size(100, 28);
-            this.SaveBreathingRateLimitButton.TabIndex = 4;
-            this.SaveBreathingRateLimitButton.Text = "Save";
-            this.SaveBreathingRateLimitButton.UseVisualStyleBackColor = true;
-            this.SaveBreathingRateLimitButton.Click += new System.EventHandler(this.SaveBreathingRateLimitButton_Click);
-            // 
-            // SaveBloodPressureLimitButton
-            // 
-            this.SaveBloodPressureLimitButton.Location = new System.Drawing.Point(699, 470);
-            this.SaveBloodPressureLimitButton.Margin = new System.Windows.Forms.Padding(4);
-            this.SaveBloodPressureLimitButton.Name = "SaveBloodPressureLimitButton";
-            this.SaveBloodPressureLimitButton.Size = new System.Drawing.Size(100, 28);
-            this.SaveBloodPressureLimitButton.TabIndex = 4;
-            this.SaveBloodPressureLimitButton.Text = "Save";
-            this.SaveBloodPressureLimitButton.UseVisualStyleBackColor = true;
-            this.SaveBloodPressureLimitButton.Click += new System.EventHandler(this.SaveBloodPressureLimitButton_Click);
+            this.cpl.AutoSize = true;
+            this.cpl.Location = new System.Drawing.Point(42, 19);
+            this.cpl.Name = "cpl";
+            this.cpl.Size = new System.Drawing.Size(128, 17);
+            this.cpl.TabIndex = 4;
+            this.cpl.Text = "Current Pulse Rate";
             // 
             // SavePulseRateLimitButton
             // 
-            this.SavePulseRateLimitButton.Location = new System.Drawing.Point(699, 470);
-            this.SavePulseRateLimitButton.Margin = new System.Windows.Forms.Padding(4);
+            this.SavePulseRateLimitButton.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.SavePulseRateLimitButton.FlatAppearance.BorderSize = 0;
+            this.SavePulseRateLimitButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.SavePulseRateLimitButton.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SavePulseRateLimitButton.Location = new System.Drawing.Point(144, 158);
             this.SavePulseRateLimitButton.Name = "SavePulseRateLimitButton";
             this.SavePulseRateLimitButton.Size = new System.Drawing.Size(100, 28);
-            this.SavePulseRateLimitButton.TabIndex = 4;
+            this.SavePulseRateLimitButton.TabIndex = 3;
             this.SavePulseRateLimitButton.Text = "Save";
-            this.SavePulseRateLimitButton.UseVisualStyleBackColor = true;
+            this.SavePulseRateLimitButton.UseVisualStyleBackColor = false;
             this.SavePulseRateLimitButton.Click += new System.EventHandler(this.SavePulseRateLimitButton_Click);
             // 
             // UpperLimitPulseRateBox
             // 
-            this.UpperLimitPulseRateBox.Location = new System.Drawing.Point(420, 305);
-            this.UpperLimitPulseRateBox.Margin = new System.Windows.Forms.Padding(4);
+            this.UpperLimitPulseRateBox.BackColor = System.Drawing.SystemColors.Control;
+            this.UpperLimitPulseRateBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.UpperLimitPulseRateBox.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.UpperLimitPulseRateBox.Location = new System.Drawing.Point(235, 96);
             this.UpperLimitPulseRateBox.Name = "UpperLimitPulseRateBox";
-            this.UpperLimitPulseRateBox.Size = new System.Drawing.Size(132, 22);
-            this.UpperLimitPulseRateBox.TabIndex = 3;
+            this.UpperLimitPulseRateBox.Size = new System.Drawing.Size(125, 21);
+            this.UpperLimitPulseRateBox.TabIndex = 2;
+            // 
+            // LowerLimitPulseRateBox
+            // 
+            this.LowerLimitPulseRateBox.BackColor = System.Drawing.SystemColors.Control;
+            this.LowerLimitPulseRateBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.LowerLimitPulseRateBox.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LowerLimitPulseRateBox.Location = new System.Drawing.Point(235, 58);
+            this.LowerLimitPulseRateBox.Name = "LowerLimitPulseRateBox";
+            this.LowerLimitPulseRateBox.Size = new System.Drawing.Size(125, 21);
+            this.LowerLimitPulseRateBox.TabIndex = 1;
             // 
             // CurrentPulseRateBox
             // 
-            this.CurrentPulseRateBox.Location = new System.Drawing.Point(420, 186);
-            this.CurrentPulseRateBox.Margin = new System.Windows.Forms.Padding(4);
+            this.CurrentPulseRateBox.BackColor = System.Drawing.SystemColors.Control;
+            this.CurrentPulseRateBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.CurrentPulseRateBox.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CurrentPulseRateBox.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.CurrentPulseRateBox.Location = new System.Drawing.Point(235, 19);
             this.CurrentPulseRateBox.Name = "CurrentPulseRateBox";
             this.CurrentPulseRateBox.ReadOnly = true;
-            this.CurrentPulseRateBox.Size = new System.Drawing.Size(132, 22);
-            this.CurrentPulseRateBox.TabIndex = 2;
+            this.CurrentPulseRateBox.Size = new System.Drawing.Size(125, 21);
+            this.CurrentPulseRateBox.TabIndex = 0;
             // 
-            // label3
+            // BloodPressurePanle
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(251, 314);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(80, 17);
-            this.label3.TabIndex = 1;
-            this.label3.Text = "Upper Limit";
+            this.BloodPressurePanle.Controls.Add(this.panel14);
+            this.BloodPressurePanle.Controls.Add(this.panel13);
+            this.BloodPressurePanle.Controls.Add(this.ulbp);
+            this.BloodPressurePanle.Controls.Add(this.llbp);
+            this.BloodPressurePanle.Controls.Add(this.cbp);
+            this.BloodPressurePanle.Controls.Add(this.SaveBloodPressureLimitButton);
+            this.BloodPressurePanle.Controls.Add(this.UpperLimitBloodPressureBox);
+            this.BloodPressurePanle.Controls.Add(this.LowerLimitBloodPressureBox);
+            this.BloodPressurePanle.Controls.Add(this.CurrentBloodPressureBox);
+            this.BloodPressurePanle.Location = new System.Drawing.Point(663, 439);
+            this.BloodPressurePanle.Name = "BloodPressurePanle";
+            this.BloodPressurePanle.Size = new System.Drawing.Size(389, 190);
+            this.BloodPressurePanle.TabIndex = 26;
             // 
-            // label2
+            // ulbp
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(251, 186);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(128, 17);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "Current Pulse Rate";
+            this.ulbp.AutoSize = true;
+            this.ulbp.Location = new System.Drawing.Point(42, 100);
+            this.ulbp.Name = "ulbp";
+            this.ulbp.Size = new System.Drawing.Size(80, 17);
+            this.ulbp.TabIndex = 6;
+            this.ulbp.Text = "Upper Limit";
+            // 
+            // llbp
+            // 
+            this.llbp.AutoSize = true;
+            this.llbp.Location = new System.Drawing.Point(42, 63);
+            this.llbp.Name = "llbp";
+            this.llbp.Size = new System.Drawing.Size(79, 17);
+            this.llbp.TabIndex = 5;
+            this.llbp.Text = "Lower Limit";
+            // 
+            // cbp
+            // 
+            this.cbp.AutoSize = true;
+            this.cbp.Location = new System.Drawing.Point(42, 19);
+            this.cbp.Name = "cbp";
+            this.cbp.Size = new System.Drawing.Size(156, 17);
+            this.cbp.TabIndex = 4;
+            this.cbp.Text = "Current Blood Pressure";
+            // 
+            // SaveBloodPressureLimitButton
+            // 
+            this.SaveBloodPressureLimitButton.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.SaveBloodPressureLimitButton.FlatAppearance.BorderSize = 0;
+            this.SaveBloodPressureLimitButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.SaveBloodPressureLimitButton.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SaveBloodPressureLimitButton.Location = new System.Drawing.Point(144, 158);
+            this.SaveBloodPressureLimitButton.Name = "SaveBloodPressureLimitButton";
+            this.SaveBloodPressureLimitButton.Size = new System.Drawing.Size(100, 28);
+            this.SaveBloodPressureLimitButton.TabIndex = 3;
+            this.SaveBloodPressureLimitButton.Text = "Save";
+            this.SaveBloodPressureLimitButton.UseVisualStyleBackColor = false;
+            this.SaveBloodPressureLimitButton.Click += new System.EventHandler(this.SaveBloodPressureLimitButton_Click);
+            // 
+            // UpperLimitBloodPressureBox
+            // 
+            this.UpperLimitBloodPressureBox.BackColor = System.Drawing.SystemColors.Control;
+            this.UpperLimitBloodPressureBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.UpperLimitBloodPressureBox.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.UpperLimitBloodPressureBox.Location = new System.Drawing.Point(235, 96);
+            this.UpperLimitBloodPressureBox.Name = "UpperLimitBloodPressureBox";
+            this.UpperLimitBloodPressureBox.Size = new System.Drawing.Size(125, 21);
+            this.UpperLimitBloodPressureBox.TabIndex = 2;
+            // 
+            // LowerLimitBloodPressureBox
+            // 
+            this.LowerLimitBloodPressureBox.BackColor = System.Drawing.SystemColors.Control;
+            this.LowerLimitBloodPressureBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.LowerLimitBloodPressureBox.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LowerLimitBloodPressureBox.Location = new System.Drawing.Point(235, 58);
+            this.LowerLimitBloodPressureBox.Name = "LowerLimitBloodPressureBox";
+            this.LowerLimitBloodPressureBox.Size = new System.Drawing.Size(125, 21);
+            this.LowerLimitBloodPressureBox.TabIndex = 1;
+            // 
+            // CurrentBloodPressureBox
+            // 
+            this.CurrentBloodPressureBox.BackColor = System.Drawing.SystemColors.Control;
+            this.CurrentBloodPressureBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.CurrentBloodPressureBox.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CurrentBloodPressureBox.Location = new System.Drawing.Point(235, 19);
+            this.CurrentBloodPressureBox.Name = "CurrentBloodPressureBox";
+            this.CurrentBloodPressureBox.ReadOnly = true;
+            this.CurrentBloodPressureBox.Size = new System.Drawing.Size(125, 21);
+            this.CurrentBloodPressureBox.TabIndex = 0;
+            // 
+            // BreathingRatePanel
+            // 
+            this.BreathingRatePanel.Controls.Add(this.panel8);
+            this.BreathingRatePanel.Controls.Add(this.panel7);
+            this.BreathingRatePanel.Controls.Add(this.ulbr);
+            this.BreathingRatePanel.Controls.Add(this.llbr);
+            this.BreathingRatePanel.Controls.Add(this.cbr);
+            this.BreathingRatePanel.Controls.Add(this.SaveBreathingRateLimitButton);
+            this.BreathingRatePanel.Controls.Add(this.UpperLimitBreathingRateBox);
+            this.BreathingRatePanel.Controls.Add(this.LowerLimitBreathingRateBox);
+            this.BreathingRatePanel.Controls.Add(this.CurrentBreathingRateBox);
+            this.BreathingRatePanel.Location = new System.Drawing.Point(1074, 213);
+            this.BreathingRatePanel.Name = "BreathingRatePanel";
+            this.BreathingRatePanel.Size = new System.Drawing.Size(389, 190);
+            this.BreathingRatePanel.TabIndex = 27;
+            // 
+            // panel7
+            // 
+            this.panel7.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.panel7.Location = new System.Drawing.Point(235, 79);
+            this.panel7.Margin = new System.Windows.Forms.Padding(4);
+            this.panel7.Name = "panel7";
+            this.panel7.Size = new System.Drawing.Size(125, 1);
+            this.panel7.TabIndex = 7;
+            // 
+            // ulbr
+            // 
+            this.ulbr.AutoSize = true;
+            this.ulbr.Location = new System.Drawing.Point(42, 100);
+            this.ulbr.Name = "ulbr";
+            this.ulbr.Size = new System.Drawing.Size(80, 17);
+            this.ulbr.TabIndex = 6;
+            this.ulbr.Text = "Upper Limit";
+            // 
+            // llbr
+            // 
+            this.llbr.AutoSize = true;
+            this.llbr.Location = new System.Drawing.Point(42, 63);
+            this.llbr.Name = "llbr";
+            this.llbr.Size = new System.Drawing.Size(79, 17);
+            this.llbr.TabIndex = 5;
+            this.llbr.Text = "Lower Limit";
+            // 
+            // cbr
+            // 
+            this.cbr.AutoSize = true;
+            this.cbr.Location = new System.Drawing.Point(42, 19);
+            this.cbr.Name = "cbr";
+            this.cbr.Size = new System.Drawing.Size(154, 17);
+            this.cbr.TabIndex = 4;
+            this.cbr.Text = "Current Breathing Rate";
+            // 
+            // SaveBreathingRateLimitButton
+            // 
+            this.SaveBreathingRateLimitButton.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.SaveBreathingRateLimitButton.FlatAppearance.BorderSize = 0;
+            this.SaveBreathingRateLimitButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.SaveBreathingRateLimitButton.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SaveBreathingRateLimitButton.Location = new System.Drawing.Point(144, 158);
+            this.SaveBreathingRateLimitButton.Name = "SaveBreathingRateLimitButton";
+            this.SaveBreathingRateLimitButton.Size = new System.Drawing.Size(100, 28);
+            this.SaveBreathingRateLimitButton.TabIndex = 3;
+            this.SaveBreathingRateLimitButton.Text = "Save";
+            this.SaveBreathingRateLimitButton.UseVisualStyleBackColor = false;
+            this.SaveBreathingRateLimitButton.Click += new System.EventHandler(this.SaveBreathingRateLimitButton_Click_1);
+            // 
+            // UpperLimitBreathingRateBox
+            // 
+            this.UpperLimitBreathingRateBox.BackColor = System.Drawing.SystemColors.Control;
+            this.UpperLimitBreathingRateBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.UpperLimitBreathingRateBox.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.UpperLimitBreathingRateBox.Location = new System.Drawing.Point(235, 96);
+            this.UpperLimitBreathingRateBox.Name = "UpperLimitBreathingRateBox";
+            this.UpperLimitBreathingRateBox.Size = new System.Drawing.Size(125, 21);
+            this.UpperLimitBreathingRateBox.TabIndex = 2;
+            // 
+            // LowerLimitBreathingRateBox
+            // 
+            this.LowerLimitBreathingRateBox.BackColor = System.Drawing.SystemColors.Control;
+            this.LowerLimitBreathingRateBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.LowerLimitBreathingRateBox.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LowerLimitBreathingRateBox.Location = new System.Drawing.Point(235, 58);
+            this.LowerLimitBreathingRateBox.Name = "LowerLimitBreathingRateBox";
+            this.LowerLimitBreathingRateBox.Size = new System.Drawing.Size(125, 21);
+            this.LowerLimitBreathingRateBox.TabIndex = 1;
+            // 
+            // CurrentBreathingRateBox
+            // 
+            this.CurrentBreathingRateBox.BackColor = System.Drawing.SystemColors.Control;
+            this.CurrentBreathingRateBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.CurrentBreathingRateBox.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CurrentBreathingRateBox.Location = new System.Drawing.Point(235, 19);
+            this.CurrentBreathingRateBox.Name = "CurrentBreathingRateBox";
+            this.CurrentBreathingRateBox.ReadOnly = true;
+            this.CurrentBreathingRateBox.Size = new System.Drawing.Size(125, 21);
+            this.CurrentBreathingRateBox.TabIndex = 0;
+            // 
+            // TemperaturePanel
+            // 
+            this.TemperaturePanel.Controls.Add(this.panel12);
+            this.TemperaturePanel.Controls.Add(this.panel11);
+            this.TemperaturePanel.Controls.Add(this.label8);
+            this.TemperaturePanel.Controls.Add(this.label9);
+            this.TemperaturePanel.Controls.Add(this.ct);
+            this.TemperaturePanel.Controls.Add(this.SaveTemperatureLimitButton);
+            this.TemperaturePanel.Controls.Add(this.UpperLimitTemperatureBox);
+            this.TemperaturePanel.Controls.Add(this.LowerLimitTemperatureBox);
+            this.TemperaturePanel.Controls.Add(this.CurrentTemperatureBox);
+            this.TemperaturePanel.Location = new System.Drawing.Point(246, 439);
+            this.TemperaturePanel.Name = "TemperaturePanel";
+            this.TemperaturePanel.Size = new System.Drawing.Size(389, 190);
+            this.TemperaturePanel.TabIndex = 28;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(42, 100);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(80, 17);
+            this.label8.TabIndex = 6;
+            this.label8.Text = "Upper Limit";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(42, 63);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(79, 17);
+            this.label9.TabIndex = 5;
+            this.label9.Text = "Lower Limit";
+            // 
+            // ct
+            // 
+            this.ct.AutoSize = true;
+            this.ct.Location = new System.Drawing.Point(42, 19);
+            this.ct.Name = "ct";
+            this.ct.Size = new System.Drawing.Size(141, 17);
+            this.ct.TabIndex = 4;
+            this.ct.Text = "Current Temperature";
+            // 
+            // SaveTemperatureLimitButton
+            // 
+            this.SaveTemperatureLimitButton.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.SaveTemperatureLimitButton.FlatAppearance.BorderSize = 0;
+            this.SaveTemperatureLimitButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.SaveTemperatureLimitButton.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SaveTemperatureLimitButton.Location = new System.Drawing.Point(144, 158);
+            this.SaveTemperatureLimitButton.Name = "SaveTemperatureLimitButton";
+            this.SaveTemperatureLimitButton.Size = new System.Drawing.Size(100, 28);
+            this.SaveTemperatureLimitButton.TabIndex = 3;
+            this.SaveTemperatureLimitButton.Text = "Save";
+            this.SaveTemperatureLimitButton.UseVisualStyleBackColor = false;
+            this.SaveTemperatureLimitButton.Click += new System.EventHandler(this.SaveTemperatureLimitButton_Click_1);
+            // 
+            // UpperLimitTemperatureBox
+            // 
+            this.UpperLimitTemperatureBox.BackColor = System.Drawing.SystemColors.Control;
+            this.UpperLimitTemperatureBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.UpperLimitTemperatureBox.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.UpperLimitTemperatureBox.Location = new System.Drawing.Point(235, 96);
+            this.UpperLimitTemperatureBox.Name = "UpperLimitTemperatureBox";
+            this.UpperLimitTemperatureBox.Size = new System.Drawing.Size(125, 21);
+            this.UpperLimitTemperatureBox.TabIndex = 2;
+            // 
+            // LowerLimitTemperatureBox
+            // 
+            this.LowerLimitTemperatureBox.BackColor = System.Drawing.SystemColors.Control;
+            this.LowerLimitTemperatureBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.LowerLimitTemperatureBox.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LowerLimitTemperatureBox.Location = new System.Drawing.Point(235, 58);
+            this.LowerLimitTemperatureBox.Name = "LowerLimitTemperatureBox";
+            this.LowerLimitTemperatureBox.Size = new System.Drawing.Size(125, 21);
+            this.LowerLimitTemperatureBox.TabIndex = 1;
+            // 
+            // CurrentTemperatureBox
+            // 
+            this.CurrentTemperatureBox.BackColor = System.Drawing.SystemColors.Control;
+            this.CurrentTemperatureBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.CurrentTemperatureBox.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CurrentTemperatureBox.Location = new System.Drawing.Point(235, 19);
+            this.CurrentTemperatureBox.Name = "CurrentTemperatureBox";
+            this.CurrentTemperatureBox.ReadOnly = true;
+            this.CurrentTemperatureBox.Size = new System.Drawing.Size(125, 21);
+            this.CurrentTemperatureBox.TabIndex = 0;
+            // 
+            // panel8
+            // 
+            this.panel8.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.panel8.Location = new System.Drawing.Point(235, 118);
+            this.panel8.Margin = new System.Windows.Forms.Padding(4);
+            this.panel8.Name = "panel8";
+            this.panel8.Size = new System.Drawing.Size(125, 1);
+            this.panel8.TabIndex = 8;
+            // 
+            // panel9
+            // 
+            this.panel9.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.panel9.Location = new System.Drawing.Point(235, 79);
+            this.panel9.Margin = new System.Windows.Forms.Padding(4);
+            this.panel9.Name = "panel9";
+            this.panel9.Size = new System.Drawing.Size(125, 1);
+            this.panel9.TabIndex = 8;
+            // 
+            // panel10
+            // 
+            this.panel10.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.panel10.Location = new System.Drawing.Point(235, 118);
+            this.panel10.Margin = new System.Windows.Forms.Padding(4);
+            this.panel10.Name = "panel10";
+            this.panel10.Size = new System.Drawing.Size(125, 1);
+            this.panel10.TabIndex = 8;
+            // 
+            // panel11
+            // 
+            this.panel11.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.panel11.Location = new System.Drawing.Point(235, 79);
+            this.panel11.Margin = new System.Windows.Forms.Padding(4);
+            this.panel11.Name = "panel11";
+            this.panel11.Size = new System.Drawing.Size(125, 1);
+            this.panel11.TabIndex = 9;
+            // 
+            // panel12
+            // 
+            this.panel12.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.panel12.Location = new System.Drawing.Point(235, 118);
+            this.panel12.Margin = new System.Windows.Forms.Padding(4);
+            this.panel12.Name = "panel12";
+            this.panel12.Size = new System.Drawing.Size(125, 1);
+            this.panel12.TabIndex = 9;
+            // 
+            // panel13
+            // 
+            this.panel13.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.panel13.Location = new System.Drawing.Point(235, 79);
+            this.panel13.Margin = new System.Windows.Forms.Padding(4);
+            this.panel13.Name = "panel13";
+            this.panel13.Size = new System.Drawing.Size(125, 1);
+            this.panel13.TabIndex = 9;
+            // 
+            // panel14
+            // 
+            this.panel14.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.panel14.Location = new System.Drawing.Point(235, 118);
+            this.panel14.Margin = new System.Windows.Forms.Padding(4);
+            this.panel14.Name = "panel14";
+            this.panel14.Size = new System.Drawing.Size(125, 1);
+            this.panel14.TabIndex = 9;
             // 
             // EditAlarm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1093, 513);
-            this.Controls.Add(this.panel7);
+            this.ClientSize = new System.Drawing.Size(1093, 455);
+            this.Controls.Add(this.TemperaturePanel);
+            this.Controls.Add(this.BreathingRatePanel);
+            this.Controls.Add(this.BloodPressurePanle);
+            this.Controls.Add(this.PulseRatePanel);
             this.Controls.Add(this.panel6);
             this.Controls.Add(this.panel5);
             this.Controls.Add(this.panel4);
@@ -568,14 +677,14 @@
             this.Text = "Form6";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            this.panel7.ResumeLayout(false);
-            this.panel7.PerformLayout();
-            this.panel8.ResumeLayout(false);
-            this.panel8.PerformLayout();
-            this.panel9.ResumeLayout(false);
-            this.panel9.PerformLayout();
-            this.panel10.ResumeLayout(false);
-            this.panel10.PerformLayout();
+            this.PulseRatePanel.ResumeLayout(false);
+            this.PulseRatePanel.PerformLayout();
+            this.BloodPressurePanle.ResumeLayout(false);
+            this.BloodPressurePanle.PerformLayout();
+            this.BreathingRatePanel.ResumeLayout(false);
+            this.BreathingRatePanel.PerformLayout();
+            this.TemperaturePanel.ResumeLayout(false);
+            this.TemperaturePanel.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -593,37 +702,45 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button PulseRateButton;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Panel panel7;
+        private System.Windows.Forms.Panel PulseRatePanel;
+        private System.Windows.Forms.Label ulp;
+        private System.Windows.Forms.Label llp;
+        private System.Windows.Forms.Label cpl;
         private System.Windows.Forms.Button SavePulseRateLimitButton;
-        private System.Windows.Forms.Panel panel8;
-        private System.Windows.Forms.Button SaveBloodPressureLimitButton;
-        private System.Windows.Forms.Panel panel9;
-        private System.Windows.Forms.Button SaveBreathingRateLimitButton;
-        private System.Windows.Forms.Panel panel10;
-        private System.Windows.Forms.Button SaveTemperatureLimitButton;
-        private System.Windows.Forms.TextBox LowerLimitPulseRateBox;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.TextBox LowerLimitBloodPressureBox;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox UpperLimitBloodPressureBox;
-        private System.Windows.Forms.TextBox CurrentBloodPressureBox;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.TextBox LowerLimitBreathingRateBox;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox UpperLimitBreathingRateBox;
-        private System.Windows.Forms.TextBox CurrentBreathingRateBox;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.TextBox LowerLimitTemperatureBox;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox UpperLimitTemperatureBox;
-        private System.Windows.Forms.TextBox CurrentTemperatureBox;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label label13;
         private System.Windows.Forms.TextBox UpperLimitPulseRateBox;
+        private System.Windows.Forms.TextBox LowerLimitPulseRateBox;
         private System.Windows.Forms.TextBox CurrentPulseRateBox;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Panel BloodPressurePanle;
+        private System.Windows.Forms.Label ulbp;
+        private System.Windows.Forms.Label llbp;
+        private System.Windows.Forms.Label cbp;
+        private System.Windows.Forms.Button SaveBloodPressureLimitButton;
+        private System.Windows.Forms.TextBox UpperLimitBloodPressureBox;
+        private System.Windows.Forms.TextBox LowerLimitBloodPressureBox;
+        private System.Windows.Forms.TextBox CurrentBloodPressureBox;
+        private System.Windows.Forms.Panel BreathingRatePanel;
+        private System.Windows.Forms.Label ulbr;
+        private System.Windows.Forms.Label llbr;
+        private System.Windows.Forms.Label cbr;
+        private System.Windows.Forms.Button SaveBreathingRateLimitButton;
+        private System.Windows.Forms.TextBox UpperLimitBreathingRateBox;
+        private System.Windows.Forms.TextBox LowerLimitBreathingRateBox;
+        private System.Windows.Forms.TextBox CurrentBreathingRateBox;
+        private System.Windows.Forms.Panel TemperaturePanel;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label ct;
+        private System.Windows.Forms.Button SaveTemperatureLimitButton;
+        private System.Windows.Forms.TextBox UpperLimitTemperatureBox;
+        private System.Windows.Forms.TextBox LowerLimitTemperatureBox;
+        private System.Windows.Forms.TextBox CurrentTemperatureBox;
+        private System.Windows.Forms.Panel panel7;
+        private System.Windows.Forms.Panel panel8;
+        private System.Windows.Forms.Panel panel10;
+        private System.Windows.Forms.Panel panel9;
+        private System.Windows.Forms.Panel panel14;
+        private System.Windows.Forms.Panel panel13;
+        private System.Windows.Forms.Panel panel12;
+        private System.Windows.Forms.Panel panel11;
     }
 }

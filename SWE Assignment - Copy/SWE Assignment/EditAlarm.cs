@@ -15,12 +15,12 @@ namespace SWE_Assignment
         private static int btClicked = 0;
         public static int plLowerLimit = 90;
         public static int plUpperLimit = 120;
-        public static int bpUpperLimit;
-        public static int bpLowerLimit;
-        public static int brUpperLimit;
-        public static int brLowerLimit;
-        public static int tUpperLimit;
-        public static int tLowerLimit;
+        public static int bpUpperLimit = 90;
+        public static int bpLowerLimit = 120;
+        public static int brUpperLimit = 90;
+        public static int brLowerLimit = 95;
+        public static int tUpperLimit = 90;
+        public static int tLowerLimit = 120;
         private int lowerLimit;
         private int upperLimit;
         private static string text;
@@ -28,23 +28,23 @@ namespace SWE_Assignment
         public EditAlarm()
         {
             InitializeComponent();
-            CurrentPulseRateBox.Text = plLowerLimit.ToString() + "   " + plUpperLimit.ToString();
-            CurrentBloodPressureBox.Text = bpLowerLimit.ToString() + "   " + bpUpperLimit.ToString();
-            CurrentBreathingRateBox.Text = brLowerLimit.ToString() + "   " + brUpperLimit.ToString();
-            CurrentTemperatureBox.Text = tLowerLimit.ToString() + "   " + tUpperLimit.ToString();
-            panel8.Location = new Point(0, 0);
-            panel9.Location = new Point(0, 0);
-            panel10.Location = new Point(0, 0); 
+            CurrentPulseRateBox.Text = plLowerLimit.ToString() + "      " + plUpperLimit.ToString();
+            CurrentBloodPressureBox.Text = bpLowerLimit.ToString() + "      " + bpUpperLimit.ToString();
+            CurrentBreathingRateBox.Text = brLowerLimit.ToString() + "      " + brUpperLimit.ToString();
+            CurrentTemperatureBox.Text = tLowerLimit.ToString() + "      " + tUpperLimit.ToString();
+            PulseRatePanel.Location = new Point(370, 135);
+            BloodPressurePanle.Location = new Point(370, 135);
+            BreathingRatePanel.Location = new Point(370, 135);
+            TemperaturePanel.Location = new Point(370, 135);
             panel2.Visible = true;
             panel3.Visible = true;
             panel4.Visible = true;
             panel5.Visible = true;
             panel6.Visible = true;
-            panel7.Visible = true;
-            panel7.BringToFront();
-            panel8.Visible = false;
-            panel9.Visible = false;
-            panel10.Visible = false;
+            PulseRatePanel.Visible = true;
+            BloodPressurePanle.Visible = false;
+            BreathingRatePanel.Visible = false;
+            TemperaturePanel.Visible = false;
 
         }
 
@@ -55,11 +55,11 @@ namespace SWE_Assignment
             panel4.Visible = false;
             panel5.Visible = false;
             panel6.Visible = false;
-            panel7.Visible = true;
-            panel7.BringToFront();
-            panel8.Visible = false;
-            panel9.Visible = false;
-            panel10.Visible = false;
+            PulseRatePanel.Visible = true;
+            BloodPressurePanle.Visible = false;
+            BreathingRatePanel.Visible = false;
+            TemperaturePanel.Visible = false;
+           
             LowerLimitBloodPressureBox.Clear();
             UpperLimitBloodPressureBox.Clear();
             LowerLimitBreathingRateBox.Clear();
@@ -78,18 +78,17 @@ namespace SWE_Assignment
             panel4.Visible = false;
             panel5.Visible = false;
             panel6.Visible = false;
-            panel7.Visible = true;
-            panel8.Visible = true;
-            panel8.BringToFront();
-            panel9.Visible = false;
-            panel10.Visible = false;
+            PulseRatePanel.Visible = false;
+            BloodPressurePanle.Visible = true;
+            BreathingRatePanel.Visible = false;
+            TemperaturePanel.Visible = false;
             LowerLimitPulseRateBox.Clear();
             UpperLimitPulseRateBox.Clear();
             LowerLimitBreathingRateBox.Clear();
             UpperLimitBreathingRateBox.Clear();
             LowerLimitTemperatureBox.Clear();
             UpperLimitTemperatureBox.Clear();
-            text = null;
+            //text = null;
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -99,18 +98,17 @@ namespace SWE_Assignment
             panel4.Visible = true;
             panel5.Visible = false;
             panel6.Visible = false;
-            panel7.Visible = true;
-            panel8.Visible = true;
-            panel9.Visible = true;
-            panel9.BringToFront();
-            panel10.Visible = false;
+            PulseRatePanel.Visible = false;
+            BloodPressurePanle.Visible = false;
+            BreathingRatePanel.Visible = true;
+            TemperaturePanel.Visible = false;
             LowerLimitPulseRateBox.Clear();
             UpperLimitPulseRateBox.Clear();
             LowerLimitBloodPressureBox.Clear();
             UpperLimitBloodPressureBox.Clear();
             LowerLimitTemperatureBox.Clear();
             UpperLimitTemperatureBox.Clear();
-            text = null;
+            //text = null;
         }
 
         private void button4_Click(object sender, EventArgs e)
@@ -120,18 +118,17 @@ namespace SWE_Assignment
             panel4.Visible = false;
             panel5.Visible = true;
             panel6.Visible = false;
-            panel7.Visible = true;
-            panel8.Visible = true;
-            panel9.Visible = true;
-            panel10.Visible = true;
-            panel10.BringToFront();
+            PulseRatePanel.Visible = false;
+            BloodPressurePanle.Visible = false;
+            BreathingRatePanel.Visible = false;
+            TemperaturePanel.Visible = true;
             LowerLimitPulseRateBox.Clear();
             UpperLimitPulseRateBox.Clear();
             LowerLimitBloodPressureBox.Clear();
             UpperLimitBloodPressureBox.Clear();
             LowerLimitBreathingRateBox.Clear();
             UpperLimitBreathingRateBox.Clear();
-            text = null;
+            //text = null;
 
         }
 
@@ -142,7 +139,10 @@ namespace SWE_Assignment
             panel4.Visible = false;
             panel5.Visible = false;
             panel6.Visible = true;
-            panel7.Visible = false;
+            PulseRatePanel.Visible = false;
+            BloodPressurePanle.Visible = false;
+            BreathingRatePanel.Visible = false;
+            TemperaturePanel.Visible = false;
             LowerLimitPulseRateBox.Clear();
             UpperLimitPulseRateBox.Clear();
             LowerLimitBloodPressureBox.Clear();
@@ -161,11 +161,9 @@ namespace SWE_Assignment
         {
             btClicked = 1;
             CurrentTextBoxUpdater();
-            //MessageBox.Show(plLowerLimit.ToString(), "Yikes", MessageBoxButtons.OK);
-            //MessageBox.Show(plUpperLimit.ToString(), "Yikes 2.0", MessageBoxButtons.OK);
             LowerLimitPulseRateBox.Clear();
             UpperLimitPulseRateBox.Clear();
-            
+            CurrentPulseRateBox.Text = text;
         }
 
         private void SaveBloodPressureLimitButton_Click(object sender, EventArgs e)
@@ -176,16 +174,15 @@ namespace SWE_Assignment
             UpperLimitBloodPressureBox.Clear();
         }
 
-        private void SaveBreathingRateLimitButton_Click(object sender, EventArgs e)
+        private void SaveBreathingRateLimitButton_Click_1(object sender, EventArgs e)
         {
             btClicked = 3;
             CurrentTextBoxUpdater();
             LowerLimitBreathingRateBox.Clear();
             UpperLimitBreathingRateBox.Clear();
-
         }
 
-        private void SaveTemperatureLimitButton_Click(object sender, EventArgs e)
+        private void SaveTemperatureLimitButton_Click_1(object sender, EventArgs e)
         {
             btClicked = 4;
             CurrentTextBoxUpdater();
@@ -195,11 +192,12 @@ namespace SWE_Assignment
 
         private void CurrentTextBoxUpdater()
         {
+            
             switch (btClicked)
             {
                 case 1:
                     TryToParse(LowerLimitPulseRateBox.Text, UpperLimitPulseRateBox.Text);
-                    CurrentPulseRateBox.Text = text;
+                    //CurrentPulseRateBox.Text = text;
                     break;
                 case 2:
                     TryToParse(LowerLimitBloodPressureBox.Text, UpperLimitBloodPressureBox.Text);
@@ -216,7 +214,7 @@ namespace SWE_Assignment
             }
         }
 
-        private string TryToParse(string a, string b)
+        private void TryToParse(string a, string b)
         {
             
             bool result1 = Int32.TryParse(a, out lowerLimit);
@@ -225,17 +223,17 @@ namespace SWE_Assignment
             if (result1 == false || result2 == false)
             {
                 MessageBox.Show("Please enter valid numbers", "invalid input", MessageBoxButtons.OK);
-                return null;
+               // return null;
 
             } else if (lowerLimit >= upperLimit)
             {
                 MessageBox.Show("Please Make sure lower limit is smaller than upper limit", "invalid input", MessageBoxButtons.OK);
-                return null;
+                //return null;
             } else
             {
                 text = lowerLimit.ToString() + "      " + upperLimit.ToString();
                 SetLimitValues();
-                return text;
+                //return text;
             }
 
         }
@@ -266,8 +264,8 @@ namespace SWE_Assignment
 
             
 
-        } 
+        }
 
-     //a method to regonizes our limit violation and raise a number to alert user;
+        //a method to regonizes our limit violation and raise a number to alert user;
     }
 }

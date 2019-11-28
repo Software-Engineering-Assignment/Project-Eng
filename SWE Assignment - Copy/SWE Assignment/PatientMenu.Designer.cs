@@ -83,22 +83,19 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.MuteAlarmButton = new System.Windows.Forms.Button();
-            this.EditAlarmButton = new System.Windows.Forms.Button();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.textBox14 = new System.Windows.Forms.TextBox();
             this.TemperatureMonitortingBox = new System.Windows.Forms.TextBox();
-            this.textBox12 = new System.Windows.Forms.TextBox();
             this.BreathingRateMonitortingBox = new System.Windows.Forms.TextBox();
             this.textBox10 = new System.Windows.Forms.TextBox();
             this.textBox9 = new System.Windows.Forms.TextBox();
-            this.textBox8 = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.PulseRateMonitortingBox = new System.Windows.Forms.TextBox();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            this.button6 = new System.Windows.Forms.Button();
+            this.panel15 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             this.panel7.SuspendLayout();
             this.panel8.SuspendLayout();
@@ -118,6 +115,8 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.panel1.Controls.Add(this.panel15);
+            this.panel1.Controls.Add(this.button6);
             this.panel1.Controls.Add(this.panel6);
             this.panel1.Controls.Add(this.panel5);
             this.panel1.Controls.Add(this.panel4);
@@ -188,7 +187,7 @@
             this.button5.FlatAppearance.BorderSize = 0;
             this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button5.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button5.Location = new System.Drawing.Point(16, 346);
+            this.button5.Location = new System.Drawing.Point(13, 404);
             this.button5.Margin = new System.Windows.Forms.Padding(4);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(232, 57);
@@ -205,7 +204,7 @@
             this.button4.Location = new System.Drawing.Point(16, 288);
             this.button4.Margin = new System.Windows.Forms.Padding(4);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(232, 62);
+            this.button4.Size = new System.Drawing.Size(232, 57);
             this.button4.TabIndex = 4;
             this.button4.Text = "External sensors";
             this.button4.UseVisualStyleBackColor = true;
@@ -219,7 +218,7 @@
             this.button3.Location = new System.Drawing.Point(16, 230);
             this.button3.Margin = new System.Windows.Forms.Padding(4);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(232, 62);
+            this.button3.Size = new System.Drawing.Size(232, 57);
             this.button3.TabIndex = 3;
             this.button3.Text = "Modules";
             this.button3.UseVisualStyleBackColor = true;
@@ -230,10 +229,10 @@
             this.button2.FlatAppearance.BorderSize = 0;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(16, 171);
+            this.button2.Location = new System.Drawing.Point(16, 172);
             this.button2.Margin = new System.Windows.Forms.Padding(4);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(232, 62);
+            this.button2.Size = new System.Drawing.Size(232, 57);
             this.button2.TabIndex = 2;
             this.button2.Text = "Patient details";
             this.button2.UseVisualStyleBackColor = true;
@@ -247,7 +246,7 @@
             this.button1.Location = new System.Drawing.Point(16, 114);
             this.button1.Margin = new System.Windows.Forms.Padding(4);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(232, 62);
+            this.button1.Size = new System.Drawing.Size(232, 57);
             this.button1.TabIndex = 1;
             this.button1.Text = "Monitoring details";
             this.button1.UseVisualStyleBackColor = true;
@@ -266,8 +265,6 @@
             // 
             this.panel7.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.panel7.Controls.Add(this.panel8);
-            this.panel7.Controls.Add(this.MuteAlarmButton);
-            this.panel7.Controls.Add(this.EditAlarmButton);
             this.panel7.Controls.Add(this.tableLayoutPanel1);
             this.panel7.Dock = System.Windows.Forms.DockStyle.Right;
             this.panel7.Location = new System.Drawing.Point(246, 0);
@@ -292,7 +289,7 @@
             this.panel8.Controls.Add(this.label4);
             this.panel8.Controls.Add(this.label3);
             this.panel8.Controls.Add(this.label2);
-            this.panel8.Location = new System.Drawing.Point(13, 15);
+            this.panel8.Location = new System.Drawing.Point(14, 13);
             this.panel8.Margin = new System.Windows.Forms.Padding(4);
             this.panel8.Name = "panel8";
             this.panel8.Size = new System.Drawing.Size(847, 513);
@@ -305,7 +302,7 @@
             this.panel9.Controls.Add(this.panel12);
             this.panel9.Controls.Add(this.panel11);
             this.panel9.Controls.Add(this.panel10);
-            this.panel9.Location = new System.Drawing.Point(49, 383);
+            this.panel9.Location = new System.Drawing.Point(42, 83);
             this.panel9.Margin = new System.Windows.Forms.Padding(4);
             this.panel9.Name = "panel9";
             this.panel9.Size = new System.Drawing.Size(847, 513);
@@ -758,39 +755,6 @@
             this.label2.TabIndex = 40;
             this.label2.Text = "First name";
             // 
-            // MuteAlarmButton
-            // 
-            this.MuteAlarmButton.AutoSize = true;
-            this.MuteAlarmButton.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.MuteAlarmButton.FlatAppearance.BorderSize = 0;
-            this.MuteAlarmButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.MuteAlarmButton.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.MuteAlarmButton.ForeColor = System.Drawing.Color.White;
-            this.MuteAlarmButton.Location = new System.Drawing.Point(612, 459);
-            this.MuteAlarmButton.Margin = new System.Windows.Forms.Padding(4);
-            this.MuteAlarmButton.Name = "MuteAlarmButton";
-            this.MuteAlarmButton.Size = new System.Drawing.Size(163, 41);
-            this.MuteAlarmButton.TabIndex = 3;
-            this.MuteAlarmButton.Text = "Mute Alarm";
-            this.MuteAlarmButton.UseVisualStyleBackColor = false;
-            // 
-            // EditAlarmButton
-            // 
-            this.EditAlarmButton.AutoSize = true;
-            this.EditAlarmButton.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.EditAlarmButton.FlatAppearance.BorderSize = 0;
-            this.EditAlarmButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.EditAlarmButton.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.EditAlarmButton.ForeColor = System.Drawing.Color.White;
-            this.EditAlarmButton.Location = new System.Drawing.Point(353, 462);
-            this.EditAlarmButton.Margin = new System.Windows.Forms.Padding(4);
-            this.EditAlarmButton.Name = "EditAlarmButton";
-            this.EditAlarmButton.Size = new System.Drawing.Size(207, 41);
-            this.EditAlarmButton.TabIndex = 2;
-            this.EditAlarmButton.Text = "Edit Alarm Limits";
-            this.EditAlarmButton.UseVisualStyleBackColor = false;
-            this.EditAlarmButton.Click += new System.EventHandler(this.button15_Click);
-            // 
             // tableLayoutPanel1
             // 
             this.tableLayoutPanel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -801,13 +765,10 @@
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tableLayoutPanel1.Controls.Add(this.textBox14, 2, 3);
             this.tableLayoutPanel1.Controls.Add(this.TemperatureMonitortingBox, 1, 3);
-            this.tableLayoutPanel1.Controls.Add(this.textBox12, 2, 2);
             this.tableLayoutPanel1.Controls.Add(this.BreathingRateMonitortingBox, 1, 2);
             this.tableLayoutPanel1.Controls.Add(this.textBox10, 2, 1);
             this.tableLayoutPanel1.Controls.Add(this.textBox9, 1, 1);
-            this.tableLayoutPanel1.Controls.Add(this.textBox8, 2, 0);
             this.tableLayoutPanel1.Controls.Add(this.label8, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.label9, 0, 1);
             this.tableLayoutPanel1.Controls.Add(this.label10, 0, 2);
@@ -825,96 +786,63 @@
             this.tableLayoutPanel1.Size = new System.Drawing.Size(796, 369);
             this.tableLayoutPanel1.TabIndex = 1;
             // 
-            // textBox14
-            // 
-            this.textBox14.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.textBox14.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.textBox14.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox14.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox14.Location = new System.Drawing.Point(596, 312);
-            this.textBox14.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox14.Name = "textBox14";
-            this.textBox14.ReadOnly = true;
-            this.textBox14.Size = new System.Drawing.Size(133, 20);
-            this.textBox14.TabIndex = 11;
-            // 
             // TemperatureMonitortingBox
             // 
             this.TemperatureMonitortingBox.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.TemperatureMonitortingBox.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.TemperatureMonitortingBox.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.TemperatureMonitortingBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.TemperatureMonitortingBox.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TemperatureMonitortingBox.Location = new System.Drawing.Point(331, 312);
+            this.TemperatureMonitortingBox.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TemperatureMonitortingBox.ForeColor = System.Drawing.Color.LawnGreen;
+            this.TemperatureMonitortingBox.Location = new System.Drawing.Point(331, 310);
             this.TemperatureMonitortingBox.Margin = new System.Windows.Forms.Padding(4);
             this.TemperatureMonitortingBox.Name = "TemperatureMonitortingBox";
             this.TemperatureMonitortingBox.ReadOnly = true;
-            this.TemperatureMonitortingBox.Size = new System.Drawing.Size(133, 20);
+            this.TemperatureMonitortingBox.Size = new System.Drawing.Size(133, 25);
             this.TemperatureMonitortingBox.TabIndex = 10;
-            // 
-            // textBox12
-            // 
-            this.textBox12.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.textBox12.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.textBox12.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox12.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox12.Location = new System.Drawing.Point(596, 220);
-            this.textBox12.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox12.Name = "textBox12";
-            this.textBox12.ReadOnly = true;
-            this.textBox12.Size = new System.Drawing.Size(133, 20);
-            this.textBox12.TabIndex = 9;
+            this.TemperatureMonitortingBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // BreathingRateMonitortingBox
             // 
             this.BreathingRateMonitortingBox.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.BreathingRateMonitortingBox.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.BreathingRateMonitortingBox.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.BreathingRateMonitortingBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.BreathingRateMonitortingBox.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BreathingRateMonitortingBox.Location = new System.Drawing.Point(331, 220);
+            this.BreathingRateMonitortingBox.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BreathingRateMonitortingBox.ForeColor = System.Drawing.Color.LawnGreen;
+            this.BreathingRateMonitortingBox.Location = new System.Drawing.Point(331, 217);
             this.BreathingRateMonitortingBox.Margin = new System.Windows.Forms.Padding(4);
             this.BreathingRateMonitortingBox.Name = "BreathingRateMonitortingBox";
             this.BreathingRateMonitortingBox.ReadOnly = true;
-            this.BreathingRateMonitortingBox.Size = new System.Drawing.Size(133, 20);
+            this.BreathingRateMonitortingBox.Size = new System.Drawing.Size(133, 25);
             this.BreathingRateMonitortingBox.TabIndex = 8;
+            this.BreathingRateMonitortingBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // textBox10
             // 
             this.textBox10.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.textBox10.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.textBox10.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.textBox10.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox10.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox10.Location = new System.Drawing.Point(596, 128);
+            this.textBox10.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox10.ForeColor = System.Drawing.Color.LawnGreen;
+            this.textBox10.Location = new System.Drawing.Point(596, 125);
             this.textBox10.Margin = new System.Windows.Forms.Padding(4);
             this.textBox10.Name = "textBox10";
             this.textBox10.ReadOnly = true;
-            this.textBox10.Size = new System.Drawing.Size(133, 20);
+            this.textBox10.Size = new System.Drawing.Size(133, 25);
             this.textBox10.TabIndex = 7;
             // 
             // textBox9
             // 
             this.textBox9.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.textBox9.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.textBox9.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.textBox9.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox9.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox9.Location = new System.Drawing.Point(331, 128);
+            this.textBox9.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox9.ForeColor = System.Drawing.Color.LawnGreen;
+            this.textBox9.Location = new System.Drawing.Point(331, 125);
             this.textBox9.Margin = new System.Windows.Forms.Padding(4);
             this.textBox9.Name = "textBox9";
             this.textBox9.ReadOnly = true;
-            this.textBox9.Size = new System.Drawing.Size(133, 20);
+            this.textBox9.Size = new System.Drawing.Size(133, 25);
             this.textBox9.TabIndex = 6;
-            // 
-            // textBox8
-            // 
-            this.textBox8.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.textBox8.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.textBox8.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox8.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox8.Location = new System.Drawing.Point(596, 36);
-            this.textBox8.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.ReadOnly = true;
-            this.textBox8.Size = new System.Drawing.Size(133, 20);
-            this.textBox8.TabIndex = 5;
             // 
             // label8
             // 
@@ -972,19 +900,44 @@
             // PulseRateMonitortingBox
             // 
             this.PulseRateMonitortingBox.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.PulseRateMonitortingBox.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.PulseRateMonitortingBox.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.PulseRateMonitortingBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.PulseRateMonitortingBox.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PulseRateMonitortingBox.Location = new System.Drawing.Point(331, 36);
+            this.PulseRateMonitortingBox.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PulseRateMonitortingBox.ForeColor = System.Drawing.Color.LawnGreen;
+            this.PulseRateMonitortingBox.Location = new System.Drawing.Point(331, 33);
             this.PulseRateMonitortingBox.Margin = new System.Windows.Forms.Padding(4);
             this.PulseRateMonitortingBox.Name = "PulseRateMonitortingBox";
             this.PulseRateMonitortingBox.ReadOnly = true;
-            this.PulseRateMonitortingBox.Size = new System.Drawing.Size(133, 20);
+            this.PulseRateMonitortingBox.Size = new System.Drawing.Size(133, 25);
             this.PulseRateMonitortingBox.TabIndex = 4;
+            this.PulseRateMonitortingBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // openFileDialog1
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
+            // 
+            // button6
+            // 
+            this.button6.FlatAppearance.BorderSize = 0;
+            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button6.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button6.Location = new System.Drawing.Point(16, 346);
+            this.button6.Margin = new System.Windows.Forms.Padding(4);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(232, 57);
+            this.button6.TabIndex = 29;
+            this.button6.Text = "Edit Alarm Limit";
+            this.button6.UseVisualStyleBackColor = true;
+            this.button6.Click += new System.EventHandler(this.button6_Click_1);
+            // 
+            // panel15
+            // 
+            this.panel15.BackColor = System.Drawing.Color.Maroon;
+            this.panel15.Location = new System.Drawing.Point(3, 404);
+            this.panel15.Margin = new System.Windows.Forms.Padding(4);
+            this.panel15.Name = "panel15";
+            this.panel15.Size = new System.Drawing.Size(13, 57);
+            this.panel15.TabIndex = 29;
             // 
             // PatientMenu
             // 
@@ -1002,7 +955,6 @@
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel7.ResumeLayout(false);
-            this.panel7.PerformLayout();
             this.panel8.ResumeLayout(false);
             this.panel8.PerformLayout();
             this.panel9.ResumeLayout(false);
@@ -1042,18 +994,14 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel7;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
-        private System.Windows.Forms.TextBox textBox14;
         private System.Windows.Forms.TextBox TemperatureMonitortingBox;
-        private System.Windows.Forms.TextBox textBox12;
         private System.Windows.Forms.TextBox BreathingRateMonitortingBox;
         private System.Windows.Forms.TextBox textBox10;
         private System.Windows.Forms.TextBox textBox9;
-        private System.Windows.Forms.TextBox textBox8;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.TextBox PulseRateMonitortingBox;
         private System.Windows.Forms.Panel panel8;
         private System.Windows.Forms.TextBox PatientWeightBox;
         private System.Windows.Forms.TextBox PatientHeightBox;
@@ -1092,11 +1040,12 @@
         private System.Windows.Forms.Button PulseRateOnButton;
         private System.Windows.Forms.Panel panel14;
         private System.Windows.Forms.Button ReadFromCsvButton;
-        private System.Windows.Forms.Button MuteAlarmButton;
-        private System.Windows.Forms.Button EditAlarmButton;
         private System.Windows.Forms.TextBox PatientLastNameBox;
         private System.Windows.Forms.TextBox PatientFirstNameBox;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
         private System.Windows.Forms.RichTextBox richTextBox1;
+        private System.Windows.Forms.TextBox PulseRateMonitortingBox;
+        private System.Windows.Forms.Panel panel15;
+        private System.Windows.Forms.Button button6;
     }
 }

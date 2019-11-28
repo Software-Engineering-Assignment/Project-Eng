@@ -8,19 +8,21 @@ using System.Threading;
 namespace SWE_Assignment
 {
 
-    
+
     class Patient
     {
-        public static int pulseRate;
-
+        public string pulseRate;
+        public string breathingRate;
+        public string temperature;
         private static string patientName;
         private static string patientLastname;
         private static string patientGender;
         private static DateTime patientBirdthday;
         private static int patientHeight = 185;
         private static int patientWeight = 65;
-     
-        
+
+        //public TextBox TextBoxToUpdate { get; set; }
+       // Action<string> updateTextBoxDelegate;
 
         public void PatientDetailPopulator()
         {
@@ -47,20 +49,55 @@ namespace SWE_Assignment
            
         }
 
-        public int PulseRate()
+        //raise and event once the value changes to textbox gets updated
+        public string PulseRate()
         {
-           // int ourRnd;
+            int i;
             Random rnd = new Random();
-            //System.Timers.Timer t = new System.Timers.Timer(1000);
             bool start = PatientMenu.pulseRateOn;
             while (start == true)
             {
-                 pulseRate = rnd.Next(EditAlarm.plLowerLimit - 10, EditAlarm.plUpperLimit + 10);
-                 Thread.Sleep(2000);
-                return pulseRate; 
+                 i = rnd.Next(EditAlarm.plLowerLimit - 10, EditAlarm.plUpperLimit + 10);
+                 pulseRate = i.ToString();
+                 Thread.Sleep(1000);
+                 return pulseRate;
+            }
+            return null;
+
+
+        }
+        
+        public string BreathingRate()
+        {
+            int i;
+            Random rnd = new Random();
+            bool start = PatientMenu.breathingRateOn;
+            while (start == true)
+            {
+                i = rnd.Next(EditAlarm.brLowerLimit - 10, EditAlarm.brUpperLimit + 10);
+                breathingRate = i.ToString();
+                Thread.Sleep(10000);
+                return breathingRate;
             }
 
-            return 0;
+            return null;
+    
+        }
+
+        public string Temperature()
+        {
+            int i;
+            Random rnd = new Random();
+            bool start = PatientMenu.temperatureOn;
+            while (start == true)
+            {
+                i = rnd.Next(EditAlarm.tLowerLimit - 10, EditAlarm.tUpperLimit + 10);
+                temperature = i.ToString();
+                Thread.Sleep(10000);
+                return temperature;
+            }
+
+            return null;
 
         }
     }

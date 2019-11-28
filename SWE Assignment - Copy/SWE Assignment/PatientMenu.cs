@@ -12,6 +12,8 @@ using System.Threading;
 
 namespace SWE_Assignment
 {
+
+    //Once Random number gens work define some logic to change the text box color if our random number is close to upper or lower limit
     public partial class PatientMenu : Form
     {
         Patient newPatient = new Patient();
@@ -25,16 +27,17 @@ namespace SWE_Assignment
         public static string update;
 
         public static bool pulseRateOn = false;
-        private bool bloodPressureOn = false;
-        private bool breathingRateOn = false;
-        private bool temperatureOn = false;
+        public static bool bloodPressureOn = false;
+        public static bool breathingRateOn = false;
+        public static bool temperatureOn = false;
+        private string value1 = null;
+        private string value3 = null;
 
 
         public PatientMenu()
         {
             InitializeComponent();
             newPatient.PatientDetailPopulator();
-
             PatientFirstNameBox.Text = getPatientName;
             PatientLastNameBox.Text = getPatientLastName;
             PatientGenderBox.Text = getPatientGender;
@@ -76,6 +79,7 @@ namespace SWE_Assignment
             panel8.Visible = false;
             panel9.Visible = false;
             panel14.Visible = false;
+            panel15.Visible = false;
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -91,6 +95,7 @@ namespace SWE_Assignment
             panel8.BringToFront();
             panel9.Visible = false;
             panel14.Visible = false;
+            panel15.Visible = false;
 
         }
 
@@ -106,6 +111,7 @@ namespace SWE_Assignment
             panel9.Visible = true;
             panel9.BringToFront();
             panel14.Visible = false;
+            panel15.Visible = false;
         }
 
         private void button4_Click(object sender, EventArgs e)
@@ -120,6 +126,7 @@ namespace SWE_Assignment
             panel9.Visible = true;
             panel14.Visible = true;
             panel14.BringToFront();
+            panel15.Visible = false;
         }
 
         private void button5_Click(object sender, EventArgs e)
@@ -130,34 +137,25 @@ namespace SWE_Assignment
             panel5.Visible = false;
             panel6.Visible = true;
             panel7.Visible = false;
+
             this.Hide();
             PatientSelection f2 = new PatientSelection();
             f2.Show();
-        }
-
-        private void button15_Click(object sender, EventArgs e)
-        {
-            //once clikced check to see if any module is on? if it is prompt user with a message to turn them off first.
-            //write a method for this purpose 
-            if (CheckModules() == 1)
-            {
-                this.Hide();
-                EditAlarm f6 = new EditAlarm();
-                f6.Show();
-            } else
-            {
-                MessageBox.Show("Dear User, Please Make sure all modules are turned off before setting new alarm limits");
-                CheckModules();
-            }
-            
         }
         
         private void button6_Click(object sender, EventArgs e)
         {
             PulseRatePicturebox.Image = Properties.Resources.connection_status_on;
             pulseRateOn = true;
-
+            //tl = newPatient.PulseRate(); bad design cause it locks the UI
+            value1 = newPatient.PulseRate();
+            PulseRateMonitortingBox.Text = value1;
+            //tl = newPatient.pulseRate;
+            //Task obj = new Task(DisplayPulseRate);
+            //obj.Start();
             
+
+
         }
 
         private void PulseRateOffButton_Click(object sender, EventArgs e)
@@ -171,6 +169,7 @@ namespace SWE_Assignment
         {
             BloodPressurePictureBox.Image = Properties.Resources.connection_status_on;
             bloodPressureOn = true;
+            
         }
 
         private void BloodPressureOffButton_Click(object sender, EventArgs e)
@@ -183,12 +182,16 @@ namespace SWE_Assignment
         {
             BreathingRatePictureBox.Image = Properties.Resources.connection_status_on;
             breathingRateOn = true;
+            value3 = newPatient.BreathingRate();
+            BreathingRateMonitortingBox.Text = value3;
+            
         }
 
         private void BreathingRateOffButton_Click(object sender, EventArgs e)
         {
             BreathingRatePictureBox.Image = Properties.Resources.connection_status_off;
             breathingRateOn = false;
+            BreathingRateMonitortingBox.Text = null;
         }
 
         private void TemperatureOnButton_Click(object sender, EventArgs e)
@@ -205,8 +208,18 @@ namespace SWE_Assignment
 
         private void PatientMenu_Load(object sender, EventArgs e)
         {
-            
+            //System.Windows.Forms.Timer timer1 = new System.Windows.Forms.Timer();
+            //timer1.Interval = 10000;//5 seconds
+            //timer1.Tick += new System.EventHandler(timer1_Tick);
+            //timer1.Start();
         }
+
+
+        //private void timer1_Tick(object sender, EventArgs e)
+        //{
+        //    //do whatever you want 
+        //    PulseRateMonitortingBox.Refresh();
+        //}
 
 
         private int CheckModules()
@@ -243,11 +256,31 @@ namespace SWE_Assignment
             else
                 return null;
         }
-
         
         private void PatientDateofBirthBox_TextChanged(object sender, EventArgs e)
         {
 
         }
-    }
+
+        private void button6_Click_1(object sender, EventArgs e)
+        {
+            if (CheckModules() == 1)
+            {
+                this.Hide();
+                EditAlarm f6 = new EditAlarm();
+                f6.Show();
+            }
+            else
+            {
+                MessageBox.Show("Dear User, Please Make sure all modules are turned off before setting new alarm limits");
+                CheckModules();
+            }
+        }
+
+        /*   private void DisplayPulseRate()
+           {
+               tl = newPatient.pulseRate;
+               PulseRateMonitortingBox.Text = tl;
+           } */
+    } 
 }
