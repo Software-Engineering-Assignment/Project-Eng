@@ -79,7 +79,7 @@
             this.button9.Location = new System.Drawing.Point(711, 19);
             this.button9.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(72, 33);
+            this.button9.Size = new System.Drawing.Size(72, 31);
             this.button9.TabIndex = 14;
             this.button9.Text = "Log out";
             this.button9.UseVisualStyleBackColor = false;

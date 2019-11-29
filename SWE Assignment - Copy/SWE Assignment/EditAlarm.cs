@@ -66,7 +66,7 @@ namespace SWE_Assignment
             UpperLimitBreathingRateBox.Clear();
             LowerLimitTemperatureBox.Clear();
             UpperLimitTemperatureBox.Clear();
-            text = null;
+            //text = null;
 
 
         }

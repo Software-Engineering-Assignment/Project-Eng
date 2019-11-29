@@ -244,6 +244,8 @@ namespace SWE_Assignment
             RichBoxPopulator();   
         }
 
+
+        //dont let the dialog accept every type
         private string RichBoxPopulator()
         {
             DialogResult result = openFileDialog1.ShowDialog();
