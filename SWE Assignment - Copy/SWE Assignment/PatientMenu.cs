@@ -33,14 +33,13 @@ namespace SWE_Assignment
         public static bool bloodPressureOn = false;
         public static bool breathingRateOn = false;
         public static bool temperatureOn = false;
-        private string value1 = null;
-        private string value3 = null;
         
 
         public PatientMenu()
         {
             InitializeComponent();
             //newPatient.PropertyChanged += _PulseRate_PropertyChanged;
+            //newPatient.PropertyChanged += _TextBox_PropertyChanged;
             newPatient.PatientDetailPopulator();
             PatientFirstNameBox.Text = getPatientName;
             PatientLastNameBox.Text = getPatientLastName;
@@ -292,5 +291,24 @@ namespace SWE_Assignment
         //        PulseRateMonitortingBox.Text = newPatient.PulseRate.ToString();
         //    }
         //}
-    } 
+
+        //void _TextBox_PropertyChanged(object sender, PropertyChangedEventArgs e)
+        //{
+        //    switch (e.PropertyName)
+        //    {
+        //        case "PulseRate":
+        //            PulseRateMonitortingBox.Text = newPatient.PulseRate.ToString();
+        //            break;
+        //        case "BreathingRate":
+        //            BreathingRateMonitortingBox.Text = newPatient.BreathingRate.ToString();
+        //            break;
+        //        case "Temperature":
+        //            TemperatureMonitortingBox.Text = newPatient.Temperature.ToString();
+        //            break;
+        //        case "BloodPressure":
+        //            BloodPressureMonitortingBox.Text = newPatient.BloodPressure.ToString();
+        //            break;
+        //    }
+        //}
+    }
 }

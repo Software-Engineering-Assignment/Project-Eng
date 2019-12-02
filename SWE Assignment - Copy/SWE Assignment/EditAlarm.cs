@@ -19,8 +19,8 @@ namespace SWE_Assignment
         public static int bpLowerLimit = 120;
         public static int brUpperLimit = 90;
         public static int brLowerLimit = 95;
-        public static int tUpperLimit = 90;
-        public static int tLowerLimit = 120;
+        public static int tUpperLimit = 120;
+        public static int tLowerLimit = 90;
         private int lowerLimit;
         private int upperLimit;
         private static string text;
