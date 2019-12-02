@@ -17,6 +17,7 @@ namespace SWE_Assignment
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             string kk = Properties.Settings.Default.Con;
+            Patient patient = Patient.Instance;
             Application.Run(new Login());
         }
     }

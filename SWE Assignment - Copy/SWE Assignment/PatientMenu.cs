@@ -10,15 +10,17 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Threading;
 
+
 namespace SWE_Assignment
 {
 
     //Once Random number gens work define some logic to change the text box color if our random number is close to upper or lower limit
     public partial class PatientMenu : Form
     {
-        Patient newPatient = new Patient();
 
-        public static string getPatientName;
+
+        Patient newPatient = Patient.Instance;
+        public static string getPatientName; 
         public static string getPatientLastName;
         public static string getPatientGender;
         public static DateTime getPetientBD;
@@ -26,17 +28,19 @@ namespace SWE_Assignment
         public static string getPatientWeight;
         public static string update;
 
+        
         public static bool pulseRateOn = false;
         public static bool bloodPressureOn = false;
         public static bool breathingRateOn = false;
         public static bool temperatureOn = false;
         private string value1 = null;
         private string value3 = null;
-
+        
 
         public PatientMenu()
         {
             InitializeComponent();
+            //newPatient.PropertyChanged += _PulseRate_PropertyChanged;
             newPatient.PatientDetailPopulator();
             PatientFirstNameBox.Text = getPatientName;
             PatientLastNameBox.Text = getPatientLastName;
@@ -147,21 +151,14 @@ namespace SWE_Assignment
         {
             PulseRatePicturebox.Image = Properties.Resources.connection_status_on;
             pulseRateOn = true;
-            //tl = newPatient.PulseRate(); bad design cause it locks the UI
-            value1 = newPatient.PulseRate();
-            PulseRateMonitortingBox.Text = value1;
-            //tl = newPatient.pulseRate;
-            //Task obj = new Task(DisplayPulseRate);
-            //obj.Start();
-            
-
-
+            newPatient.PL(true);
         }
 
         private void PulseRateOffButton_Click(object sender, EventArgs e)
         {
             PulseRatePicturebox.Image = Properties.Resources.connection_status_off;
             pulseRateOn = false;
+            newPatient.PL(false);
             PulseRateMonitortingBox.Text = null;
         }
 
@@ -169,6 +166,8 @@ namespace SWE_Assignment
         {
             BloodPressurePictureBox.Image = Properties.Resources.connection_status_on;
             bloodPressureOn = true;
+            newPatient.BP(true);
+
             
         }
 
@@ -176,14 +175,15 @@ namespace SWE_Assignment
         {
             BloodPressurePictureBox.Image = Properties.Resources.connection_status_off;
             bloodPressureOn = false;
+            newPatient.BP(false);
+            BloodPressureMonitortingBox.Text = null;
         }
 
         private void BreathingRateOnButton_Click(object sender, EventArgs e)
         {
             BreathingRatePictureBox.Image = Properties.Resources.connection_status_on;
             breathingRateOn = true;
-            value3 = newPatient.BreathingRate();
-            BreathingRateMonitortingBox.Text = value3;
+            newPatient.BR(true);
             
         }
 
@@ -191,6 +191,7 @@ namespace SWE_Assignment
         {
             BreathingRatePictureBox.Image = Properties.Resources.connection_status_off;
             breathingRateOn = false;
+            newPatient.BR(false);
             BreathingRateMonitortingBox.Text = null;
         }
 
@@ -198,12 +199,16 @@ namespace SWE_Assignment
         {
             TemperaturePictureBox.Image = Properties.Resources.connection_status_on;
             temperatureOn = true;
+            newPatient.T(true);
+            
         }
 
         private void TemperatureOffButton_Click(object sender, EventArgs e)
         {
             TemperaturePictureBox.Image = Properties.Resources.connection_status_off;
             temperatureOn = false;
+            newPatient.T(false);
+            TemperatureMonitortingBox.Text = null;
         }
 
         private void PatientMenu_Load(object sender, EventArgs e)
@@ -279,10 +284,13 @@ namespace SWE_Assignment
             }
         }
 
-        /*   private void DisplayPulseRate()
-           {
-               tl = newPatient.pulseRate;
-               PulseRateMonitortingBox.Text = tl;
-           } */
+
+        //void _PulseRate_PropertyChanged(object sender, PropertyChangedEventArgs e)
+        //{ 
+        //    if(e.PropertyName == "PulseRate")
+        //    {
+        //        PulseRateMonitortingBox.Text = newPatient.PulseRate.ToString();
+        //    }
+        //}
     } 
 }
