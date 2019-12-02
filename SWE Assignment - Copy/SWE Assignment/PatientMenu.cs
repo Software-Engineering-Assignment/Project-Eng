@@ -39,7 +39,7 @@ namespace SWE_Assignment
         {
             InitializeComponent();
             //newPatient.PropertyChanged += _PulseRate_PropertyChanged;
-            //newPatient.PropertyChanged += _TextBox_PropertyChanged;
+            newPatient.PropertyChanged += _TextBox_PropertyChanged;
             newPatient.PatientDetailPopulator();
             PatientFirstNameBox.Text = getPatientName;
             PatientLastNameBox.Text = getPatientLastName;
@@ -134,16 +134,18 @@ namespace SWE_Assignment
 
         private void button5_Click(object sender, EventArgs e)
         {
-            panel2.Visible = false;
-            panel3.Visible = false;
-            panel4.Visible = false;
-            panel5.Visible = false;
-            panel6.Visible = true;
-            panel7.Visible = false;
-
-            this.Hide();
-            PatientSelection f2 = new PatientSelection();
-            f2.Show();
+            if (CheckModules() == 1)
+            {
+                this.Close();
+                PatientSelection f2 = new PatientSelection();
+                f2.Show();
+            }
+            else
+            {
+                MessageBox.Show("Dear User, Please Make sure all modules are turned off");
+            }
+            
+           
         }
         
         private void button6_Click(object sender, EventArgs e)
@@ -252,7 +254,9 @@ namespace SWE_Assignment
         //dont let the dialog accept every type
         private string RichBoxPopulator()
         {
+            openFileDialog1.Filter = "CSV Files (*.csv)|*.csv";
             DialogResult result = openFileDialog1.ShowDialog();
+            
             if (result == DialogResult.OK)
             {
                 string filename = openFileDialog1.FileName;
@@ -272,43 +276,51 @@ namespace SWE_Assignment
         {
             if (CheckModules() == 1)
             {
-                this.Hide();
+                this.Close();
                 EditAlarm f6 = new EditAlarm();
                 f6.Show();
             }
             else
             {
                 MessageBox.Show("Dear User, Please Make sure all modules are turned off before setting new alarm limits");
-                CheckModules();
             }
         }
 
 
-        //void _PulseRate_PropertyChanged(object sender, PropertyChangedEventArgs e)
-        //{ 
-        //    if(e.PropertyName == "PulseRate")
-        //    {
-        //        PulseRateMonitortingBox.Text = newPatient.PulseRate.ToString();
-        //    }
-        //}
 
-        //void _TextBox_PropertyChanged(object sender, PropertyChangedEventArgs e)
-        //{
-        //    switch (e.PropertyName)
-        //    {
-        //        case "PulseRate":
-        //            PulseRateMonitortingBox.Text = newPatient.PulseRate.ToString();
-        //            break;
-        //        case "BreathingRate":
-        //            BreathingRateMonitortingBox.Text = newPatient.BreathingRate.ToString();
-        //            break;
-        //        case "Temperature":
-        //            TemperatureMonitortingBox.Text = newPatient.Temperature.ToString();
-        //            break;
-        //        case "BloodPressure":
-        //            BloodPressureMonitortingBox.Text = newPatient.BloodPressure.ToString();
-        //            break;
-        //    }
-        //}
+
+        void _TextBox_PropertyChanged(object sender, PropertyChangedEventArgs e)
+        {
+            switch (e.PropertyName)
+            {
+                case "PulseRate":
+                    this.Invoke(new MethodInvoker(delegate ()
+                    {
+                        PulseRateMonitortingBox.Text = newPatient.PulseRate.ToString();
+                    }));
+
+                    break;
+                case "BreathingRate":
+                    this.Invoke(new MethodInvoker(delegate ()
+                    {
+                        BreathingRateMonitortingBox.Text = newPatient.BreathingRate.ToString();
+                    }));
+                    
+                    break;
+                case "Temperature":
+                    this.Invoke(new MethodInvoker(delegate ()
+                    {
+                        TemperatureMonitortingBox.Text = newPatient.Temperature.ToString();
+                    }));
+                    break;
+
+                case "BloodPressure":
+                    this.Invoke(new MethodInvoker(delegate ()
+                    {
+                        BloodPressureMonitortingBox.Text = newPatient.BloodPressure.ToString();
+                    }));
+                    break;
+            }
+        }
     }
 }

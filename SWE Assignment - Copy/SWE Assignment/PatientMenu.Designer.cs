@@ -304,7 +304,7 @@
             this.panel8.Controls.Add(this.label4);
             this.panel8.Controls.Add(this.label3);
             this.panel8.Controls.Add(this.label2);
-            this.panel8.Location = new System.Drawing.Point(10, 47);
+            this.panel8.Location = new System.Drawing.Point(10, 38);
             this.panel8.Name = "panel8";
             this.panel8.Size = new System.Drawing.Size(635, 417);
             this.panel8.TabIndex = 2;
@@ -817,7 +817,7 @@
             // BreathingRateMonitortingBox
             // 
             this.BreathingRateMonitortingBox.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.BreathingRateMonitortingBox.BackColor = System.Drawing.SystemColors.Window;
+            this.BreathingRateMonitortingBox.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.BreathingRateMonitortingBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.BreathingRateMonitortingBox.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BreathingRateMonitortingBox.ForeColor = System.Drawing.Color.LawnGreen;
@@ -831,7 +831,7 @@
             // TemperatureMonitortingBox
             // 
             this.TemperatureMonitortingBox.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.TemperatureMonitortingBox.BackColor = System.Drawing.SystemColors.Window;
+            this.TemperatureMonitortingBox.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.TemperatureMonitortingBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.TemperatureMonitortingBox.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TemperatureMonitortingBox.ForeColor = System.Drawing.Color.LawnGreen;
@@ -845,7 +845,7 @@
             // PulseRateMonitortingBox
             // 
             this.PulseRateMonitortingBox.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.PulseRateMonitortingBox.BackColor = System.Drawing.SystemColors.Window;
+            this.PulseRateMonitortingBox.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.PulseRateMonitortingBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.PulseRateMonitortingBox.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.PulseRateMonitortingBox.ForeColor = System.Drawing.Color.LawnGreen;
@@ -859,7 +859,7 @@
             // BloodPressureMonitortingBox
             // 
             this.BloodPressureMonitortingBox.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.BloodPressureMonitortingBox.BackColor = System.Drawing.SystemColors.Window;
+            this.BloodPressureMonitortingBox.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.BloodPressureMonitortingBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.BloodPressureMonitortingBox.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BloodPressureMonitortingBox.ForeColor = System.Drawing.Color.LawnGreen;
@@ -868,6 +868,7 @@
             this.BloodPressureMonitortingBox.ReadOnly = true;
             this.BloodPressureMonitortingBox.Size = new System.Drawing.Size(100, 20);
             this.BloodPressureMonitortingBox.TabIndex = 6;
+            this.BloodPressureMonitortingBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // pictureBox1
             // 

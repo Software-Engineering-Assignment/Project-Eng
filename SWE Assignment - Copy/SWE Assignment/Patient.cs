@@ -83,14 +83,13 @@ namespace SWE_Assignment
         {
             get
             {
-                lock (_padlock)
-                {
+                
                     if (_instance == null)
                     {
                         _instance = new Patient();
                     }
                     return _instance;
-                }
+                
             }
         }
 

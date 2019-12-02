@@ -15,8 +15,8 @@ namespace SWE_Assignment
         private static int btClicked = 0;
         public static int plLowerLimit = 90;
         public static int plUpperLimit = 120;
-        public static int bpUpperLimit = 90;
-        public static int bpLowerLimit = 120;
+        public static int bpUpperLimit = 220;
+        public static int bpLowerLimit = 200;
         public static int brUpperLimit = 90;
         public static int brLowerLimit = 95;
         public static int tUpperLimit = 120;
