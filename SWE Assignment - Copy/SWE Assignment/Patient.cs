@@ -127,7 +127,7 @@ namespace SWE_Assignment
         private void PulseRateGenerator(object sender, ElapsedEventArgs e)
         {
 
-            PulseRate = rnd.Next(1, 10);
+            PulseRate = rnd.Next(EditAlarm.plLowerLimit -10, EditAlarm.plUpperLimit +10);
             Console.WriteLine(PulseRate);
         }
 
@@ -139,7 +139,7 @@ namespace SWE_Assignment
         private void BreatingRateGenerator(object sender, ElapsedEventArgs e)
         {
 
-            BreathingRate = rnd.Next(11, 20);
+            BreathingRate = rnd.Next(EditAlarm.brLowerLimit - 10, EditAlarm.brUpperLimit + 10);
             Console.WriteLine(BreathingRate);
         }
 
@@ -151,7 +151,7 @@ namespace SWE_Assignment
         private void TemperatureGenerator(object sender, ElapsedEventArgs e)
         {
 
-            Temperature = rnd.Next(100, 150);
+            Temperature = rnd.Next(EditAlarm.tLowerLimit - 5, EditAlarm.tUpperLimit +5);
             Console.WriteLine(Temperature);
         }
 
@@ -164,7 +164,7 @@ namespace SWE_Assignment
         private void BloodPressureGenerator(object sender, ElapsedEventArgs e)
         {
 
-            BloodPressure = rnd.Next(100, 150);
+            BloodPressure = rnd.Next(EditAlarm.bpLowerLimit -10, EditAlarm.bpUpperLimit+10); 
             Console.WriteLine(BloodPressure);
         }
 
