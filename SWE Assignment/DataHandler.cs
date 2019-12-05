@@ -98,8 +98,12 @@ namespace SWE_Assignment
 
                 }
             }
-
             
+        }
+
+        public void updateAlarmHistory()
+        {
+
         }
 
         public void RegisterUser()
@@ -108,6 +112,11 @@ namespace SWE_Assignment
         }
 
         public void DeregisterUser()
+        {
+
+        }
+
+        public void GetPatientInfo()
         {
 
         }

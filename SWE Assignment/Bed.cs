@@ -56,5 +56,43 @@ namespace SWE_Assignment
             }
         }
 
+        public float BloodPressureSystolic
+        {
+            get
+            {
+                return bloodPressureSystolic;
+            }
+            set
+            {
+                bloodPressureSystolic = value;
+            }
+        }
+
+        public float Temp
+        {
+            get
+            {
+                return temp;
+            }
+            set
+            {
+                temp = value;
+            }
+        }
+
+        public float HeartRate
+        {
+            get
+            {
+                return heartRate;
+            }
+            set
+            {
+                heartRate = value;
+            }
+        }
+
+
+
     }
 }
