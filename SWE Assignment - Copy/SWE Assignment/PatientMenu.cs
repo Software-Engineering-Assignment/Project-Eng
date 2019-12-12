@@ -18,6 +18,16 @@ namespace SWE_Assignment
     public partial class PatientMenu : Form
     {
 
+        private static PatientMenu _PatientMenuInstance;
+        public static PatientMenu PatientMenuInstance
+        {
+            get
+            {
+                if (_PatientMenuInstance == null)
+                    _PatientMenuInstance = new PatientMenu();
+                return _PatientMenuInstance;
+            }
+        }
 
         Patient newPatient = Patient.Instance;
         public static string getPatientName; 
@@ -51,13 +61,19 @@ namespace SWE_Assignment
             
 
             label1.Text = PatientSelection.labelText;
+
+
             panel14.Location = new Point(0, 0);
             panel9.Location = new Point(0, 0);
             panel8.Location = new Point(0, 0);
             PulseRatePicturebox.Image = Properties.Resources.connection_status_off;
+            textBox15.Text = "Pulse rate module is off";
             BloodPressurePictureBox.Image = Properties.Resources.connection_status_off;
+            textBox16.Text = "Blood pressure module is off";
             BreathingRatePictureBox.Image = Properties.Resources.connection_status_off;
+            textBox17.Text = "Braething rate module is off";
             TemperaturePictureBox.Image = Properties.Resources.connection_status_off;
+            textBox18.Text = "Temperature module is off";
             panel2.Visible = true;
             panel3.Visible = true;
             panel4.Visible = true;
@@ -69,6 +85,8 @@ namespace SWE_Assignment
             panel9.Visible = false;
             panel14.Visible = false;
         }
+
+        
 
         private void button1_Click(object sender, EventArgs e)
         {
@@ -134,11 +152,23 @@ namespace SWE_Assignment
 
         private void button5_Click(object sender, EventArgs e)
         {
+
+
             if (CheckModules() == 1)
             {
-                this.Close();
-                PatientSelection f2 = new PatientSelection();
-                f2.Show();
+                this.Hide();
+                panel2.Visible = true;
+                panel3.Visible = true;
+                panel4.Visible = true;
+                panel5.Visible = true;
+                panel6.Visible = true;
+                panel7.Visible = true;
+                panel7.BringToFront();
+                panel8.Visible = false;
+                panel9.Visible = false;
+                panel14.Visible = false;
+                panel15.Visible = true;
+                PatientSelection.PatientSelectionInstance.Show();
             }
             else
             {
@@ -151,6 +181,7 @@ namespace SWE_Assignment
         private void button6_Click(object sender, EventArgs e)
         {
             PulseRatePicturebox.Image = Properties.Resources.connection_status_on;
+            textBox15.Text = "Pulse rate module is on";
             pulseRateOn = true;
             newPatient.PL(true);
         }
@@ -158,6 +189,7 @@ namespace SWE_Assignment
         private void PulseRateOffButton_Click(object sender, EventArgs e)
         {
             PulseRatePicturebox.Image = Properties.Resources.connection_status_off;
+            textBox15.Text = "Pulse rate module is off";
             pulseRateOn = false;
             newPatient.PL(false);
             PulseRateMonitortingBox.Text = null;
@@ -166,6 +198,7 @@ namespace SWE_Assignment
         private void BloodPressureOnButton_Click(object sender, EventArgs e)
         {
             BloodPressurePictureBox.Image = Properties.Resources.connection_status_on;
+            textBox16.Text = "Blood pressure module is on";
             bloodPressureOn = true;
             newPatient.BP(true);
 
@@ -175,6 +208,7 @@ namespace SWE_Assignment
         private void BloodPressureOffButton_Click(object sender, EventArgs e)
         {
             BloodPressurePictureBox.Image = Properties.Resources.connection_status_off;
+            textBox16.Text = "Blood pressure module is off";
             bloodPressureOn = false;
             newPatient.BP(false);
             BloodPressureMonitortingBox.Text = null;
@@ -183,6 +217,7 @@ namespace SWE_Assignment
         private void BreathingRateOnButton_Click(object sender, EventArgs e)
         {
             BreathingRatePictureBox.Image = Properties.Resources.connection_status_on;
+            textBox17.Text = "Braething rate module is on";
             breathingRateOn = true;
             newPatient.BR(true);
             
@@ -191,6 +226,7 @@ namespace SWE_Assignment
         private void BreathingRateOffButton_Click(object sender, EventArgs e)
         {
             BreathingRatePictureBox.Image = Properties.Resources.connection_status_off;
+            textBox17.Text = "Braething rate module is off";
             breathingRateOn = false;
             newPatient.BR(false);
             BreathingRateMonitortingBox.Text = null;
@@ -199,6 +235,7 @@ namespace SWE_Assignment
         private void TemperatureOnButton_Click(object sender, EventArgs e)
         {
             TemperaturePictureBox.Image = Properties.Resources.connection_status_on;
+            textBox18.Text = "Temperature module is on";
             temperatureOn = true;
             newPatient.T(true);
             
@@ -207,6 +244,7 @@ namespace SWE_Assignment
         private void TemperatureOffButton_Click(object sender, EventArgs e)
         {
             TemperaturePictureBox.Image = Properties.Resources.connection_status_off;
+            textBox18.Text = "Temperature module is off";
             temperatureOn = false;
             newPatient.T(false);
             TemperatureMonitortingBox.Text = null;
@@ -214,18 +252,10 @@ namespace SWE_Assignment
 
         private void PatientMenu_Load(object sender, EventArgs e)
         {
-            //System.Windows.Forms.Timer timer1 = new System.Windows.Forms.Timer();
-            //timer1.Interval = 10000;//5 seconds
-            //timer1.Tick += new System.EventHandler(timer1_Tick);
-            //timer1.Start();
+
         }
 
 
-        //private void timer1_Tick(object sender, EventArgs e)
-        //{
-        //    //do whatever you want 
-        //    PulseRateMonitortingBox.Refresh();
-        //}
 
 
         private int CheckModules()
@@ -276,9 +306,19 @@ namespace SWE_Assignment
         {
             if (CheckModules() == 1)
             {
-                this.Close();
-                EditAlarm f6 = new EditAlarm();
-                f6.Show();
+                this.Hide();
+                panel2.Visible = true;
+                panel3.Visible = true;
+                panel4.Visible = true;
+                panel5.Visible = true;
+                panel6.Visible = true;
+                panel7.Visible = true;
+                panel7.BringToFront();
+                panel8.Visible = false;
+                panel9.Visible = false;
+                panel14.Visible = false;
+                panel15.Visible = true;
+                EditAlarm.EditAlarmInstance.Show();
             }
             else
             {
@@ -287,7 +327,7 @@ namespace SWE_Assignment
         }
 
 
-
+        //https://stackoverflow.com/questions/12837305/cross-thread-operation-not-valid-how-to-access-winform-elements-from-another-mo/12837412
 
         void _TextBox_PropertyChanged(object sender, PropertyChangedEventArgs e)
         {

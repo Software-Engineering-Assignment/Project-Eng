@@ -150,6 +150,7 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <DependentUpon>CentralStation.mdf</DependentUpon>
     </Content>
+    <None Include="Resources\logo.png" />
     <None Include="Resources\connection-status-on.png" />
     <None Include="Resources\connection-status-off.png" />
   </ItemGroup>

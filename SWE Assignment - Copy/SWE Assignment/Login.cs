@@ -67,8 +67,7 @@ namespace SWE_Assignment
         private void button1_Click(object sender, EventArgs e)
         {
             this.Hide();
-            PatientSelection f2 = new PatientSelection();
-            f2.Show();
+            PatientSelection.PatientSelectionInstance.Show();
         }
     }
 }

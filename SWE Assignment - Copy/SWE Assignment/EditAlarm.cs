@@ -12,6 +12,17 @@ namespace SWE_Assignment
 {
     public partial class EditAlarm : Form
     {
+
+        private static EditAlarm _EditAlarmInstance;
+        public static EditAlarm EditAlarmInstance
+        {
+            get
+            {
+                if (_EditAlarmInstance == null)
+                    _EditAlarmInstance = new EditAlarm();
+                return _EditAlarmInstance;
+            }
+        }
         private static int btClicked = 0;
         public static int plLowerLimit = 90;
         public static int plUpperLimit = 120;
@@ -134,15 +145,7 @@ namespace SWE_Assignment
 
         private void button5_Click(object sender, EventArgs e)
         {
-            panel2.Visible = false;
-            panel3.Visible = false;
-            panel4.Visible = false;
-            panel5.Visible = false;
-            panel6.Visible = true;
-            PulseRatePanel.Visible = false;
-            BloodPressurePanle.Visible = false;
-            BreathingRatePanel.Visible = false;
-            TemperaturePanel.Visible = false;
+
             LowerLimitPulseRateBox.Clear();
             UpperLimitPulseRateBox.Clear();
             LowerLimitBloodPressureBox.Clear();
@@ -152,8 +155,16 @@ namespace SWE_Assignment
             LowerLimitTemperatureBox.Clear();
             UpperLimitTemperatureBox.Clear();
             this.Hide();
-            PatientMenu f9 = new PatientMenu();
-            f9.Show();
+            panel2.Visible = true;
+            panel3.Visible = true;
+            panel4.Visible = true;
+            panel5.Visible = true;
+            panel6.Visible = true;
+            PulseRatePanel.Visible = true;
+            BloodPressurePanle.Visible = false;
+            BreathingRatePanel.Visible = false;
+            TemperaturePanel.Visible = false;
+            PatientMenu.PatientMenuInstance.Show();
 
         }
 

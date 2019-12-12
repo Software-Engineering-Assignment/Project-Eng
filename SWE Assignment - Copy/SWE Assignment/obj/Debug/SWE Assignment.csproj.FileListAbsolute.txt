@@ -57,3 +57,19 @@ C:\Users\Shaia\Source\Repos\Project\SWE Assignment - Copy\SWE Assignment\bin\Deb
 C:\Users\Shaia\Source\Repos\Project\SWE Assignment - Copy\SWE Assignment\bin\Debug\SWE Assignment.pdb
 C:\Users\Shaia\Source\Repos\Project\SWE Assignment - Copy\SWE Assignment\bin\Debug\CentralStation.mdf
 C:\Users\Shaia\Source\Repos\Project\SWE Assignment - Copy\SWE Assignment\bin\Debug\CentralStation_log.ldf
+C:\Users\Shaia\Source\Repos\Project-Eng\SWE Assignment - Copy\SWE Assignment\bin\Debug\CentralStation.mdf
+C:\Users\Shaia\Source\Repos\Project-Eng\SWE Assignment - Copy\SWE Assignment\bin\Debug\CentralStation_log.ldf
+C:\Users\Shaia\Source\Repos\Project-Eng\SWE Assignment - Copy\SWE Assignment\bin\Debug\SWE Assignment.exe.config
+C:\Users\Shaia\Source\Repos\Project-Eng\SWE Assignment - Copy\SWE Assignment\bin\Debug\SWE Assignment.exe
+C:\Users\Shaia\Source\Repos\Project-Eng\SWE Assignment - Copy\SWE Assignment\bin\Debug\SWE Assignment.pdb
+C:\Users\Shaia\Source\Repos\Project-Eng\SWE Assignment - Copy\SWE Assignment\obj\Debug\SWE Assignment.csprojAssemblyReference.cache
+C:\Users\Shaia\Source\Repos\Project-Eng\SWE Assignment - Copy\SWE Assignment\obj\Debug\SWE_Assignment.Login.resources
+C:\Users\Shaia\Source\Repos\Project-Eng\SWE Assignment - Copy\SWE Assignment\obj\Debug\SWE_Assignment.PatientSelection.resources
+C:\Users\Shaia\Source\Repos\Project-Eng\SWE Assignment - Copy\SWE Assignment\obj\Debug\SWE_Assignment.ManagementMenu.resources
+C:\Users\Shaia\Source\Repos\Project-Eng\SWE Assignment - Copy\SWE Assignment\obj\Debug\SWE_Assignment.EditAlarm.resources
+C:\Users\Shaia\Source\Repos\Project-Eng\SWE Assignment - Copy\SWE Assignment\obj\Debug\SWE_Assignment.AlarmPopup.resources
+C:\Users\Shaia\Source\Repos\Project-Eng\SWE Assignment - Copy\SWE Assignment\obj\Debug\SWE_Assignment.PatientMenu.resources
+C:\Users\Shaia\Source\Repos\Project-Eng\SWE Assignment - Copy\SWE Assignment\obj\Debug\SWE_Assignment.Properties.Resources.resources
+C:\Users\Shaia\Source\Repos\Project-Eng\SWE Assignment - Copy\SWE Assignment\obj\Debug\SWE Assignment.csproj.GenerateResource.cache
+C:\Users\Shaia\Source\Repos\Project-Eng\SWE Assignment - Copy\SWE Assignment\obj\Debug\SWE Assignment.exe
+C:\Users\Shaia\Source\Repos\Project-Eng\SWE Assignment - Copy\SWE Assignment\obj\Debug\SWE Assignment.pdb

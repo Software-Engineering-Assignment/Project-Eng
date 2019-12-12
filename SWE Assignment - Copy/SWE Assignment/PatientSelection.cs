@@ -13,10 +13,22 @@ namespace SWE_Assignment
     public partial class PatientSelection : Form
     {
         public static string labelText = "";
+
+        private static PatientSelection _PatientSelectionInstance;
+
+        public static PatientSelection PatientSelectionInstance { 
+            get{
+                if (_PatientSelectionInstance == null)
+                    _PatientSelectionInstance = new PatientSelection();
+                return _PatientSelectionInstance;
+            }
+        }
+
         public PatientSelection()
         {
             InitializeComponent();
         }
+
 
         private void Form2_Load(object sender, EventArgs e)
         {
@@ -25,67 +37,61 @@ namespace SWE_Assignment
 
         private void button1_Click(object sender, EventArgs e)
         {
-            this.Close();
+            this.Hide();
             labelText = "BedSide 1";
-            PatientMenu f9 = new PatientMenu();
-            f9.Show();
+            
+            PatientMenu.PatientMenuInstance.Show();
 
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            this.Close();
+            this.Hide();
             labelText = "BedSide 2";
-            PatientMenu f9 = new PatientMenu();
-            f9.Show();
+            //call patient menu populator 
+            PatientMenu.PatientMenuInstance.Show();
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
-            this.Close();
+            this.Hide();
             labelText = "BedSide 3";
-            PatientMenu f9 = new PatientMenu();
-            f9.Show();
+            PatientMenu.PatientMenuInstance.Show();
         }
 
         private void button4_Click(object sender, EventArgs e)
         {
-            this.Close();
+            this.Hide();
             labelText = "BedSide 4";
-            PatientMenu f9 = new PatientMenu();
-            f9.Show();
+            PatientMenu.PatientMenuInstance.Show();
         }
 
         private void button5_Click(object sender, EventArgs e)
         {
-            this.Close();
+            this.Hide();
             labelText = "BedSide 5";
-            PatientMenu f9 = new PatientMenu();
-            f9.Show();
+            PatientMenu.PatientMenuInstance.Show();
         }
 
         private void button6_Click(object sender, EventArgs e)
         {
-            this.Close();
+            this.Hide();
             labelText = "BedSide 6";
-            PatientMenu f9 = new PatientMenu();
-            f9.Show();
+            PatientMenu.PatientMenuInstance.Show();
         }
 
         private void button7_Click(object sender, EventArgs e)
         {
-            this.Close();
+            this.Hide();
             labelText = "BedSide 7";
-            PatientMenu f9 = new PatientMenu();
-            f9.Show();
+            PatientMenu.PatientMenuInstance.Show();
         }
 
         private void button8_Click(object sender, EventArgs e)
         {
-            this.Close();
+            this.Hide();
             labelText = "BedSide 8";
-            PatientMenu f9 = new PatientMenu();
-            f9.Show();
+            PatientMenu.PatientMenuInstance.Show();
         }
     }
 }
