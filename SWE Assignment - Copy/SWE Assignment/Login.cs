@@ -17,6 +17,20 @@ namespace SWE_Assignment
         private Point offset;
         private Point startPoint = new Point(0, 0);
 
+        private static Login _instance;
+        public static Login Instance
+        {
+            get
+            {
+
+                if (_instance == null)
+                {
+                    _instance = new Login();
+                }
+                return _instance;
+
+            }
+        }
         public Login()
         {
             InitializeComponent();

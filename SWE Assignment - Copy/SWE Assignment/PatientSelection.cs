@@ -133,5 +133,11 @@ namespace SWE_Assignment
             PatientMenu.PatientMenuInstance.Show();
 
         }
+
+        private void button9_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Login.Instance.Show();
+        }
     }
 }

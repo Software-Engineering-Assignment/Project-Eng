@@ -20,6 +20,7 @@ namespace SWE_Assignment
             panel4.Visible = true;
             panel5.Visible = true;
             panel7.Visible = true;
+            panel6.Visible = true;
             panel7.BringToFront();
             panel8.Visible = false;
             panel9.Visible = false;
@@ -32,6 +33,7 @@ namespace SWE_Assignment
             panel4.Visible = false;
             panel5.Visible = false;
             panel7.Visible = true;
+            panel6.Visible = false;
             panel7.BringToFront();
             panel8.Visible = false;
             panel9.Visible = false;
@@ -45,6 +47,7 @@ namespace SWE_Assignment
             panel5.Visible = false;
             panel7.Visible = true;
             panel8.Visible = true;
+            panel6.Visible = false;
             panel8.BringToFront();
             panel9.Visible = false;
         }
@@ -58,22 +61,34 @@ namespace SWE_Assignment
             panel7.Visible = true;
             panel8.Visible = true;
             panel9.Visible = true;
+            panel6.Visible = false;
             panel9.BringToFront();
         }
 
         private void button4_Click(object sender, EventArgs e)
         {
-
             panel2.Visible = false;
             panel3.Visible = false;
             panel4.Visible = false;
             panel5.Visible = false;
             panel7.Visible = false;
+            panel6.Visible = false;
+            this.Hide();
+            Login.Instance.Show();
+
         }
 
         private void button5_Click(object sender, EventArgs e)
         {
+        }
 
+        private void Exit_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
         }
     }
 }

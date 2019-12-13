@@ -83,6 +83,7 @@
             this.button9.TabIndex = 14;
             this.button9.Text = "Log out";
             this.button9.UseVisualStyleBackColor = false;
+            this.button9.Click += new System.EventHandler(this.button9_Click);
             // 
             // panel8
             // 
