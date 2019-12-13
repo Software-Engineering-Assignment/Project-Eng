@@ -9,13 +9,14 @@ namespace SWE_Assignment
     class Bed
     {
         private string patientName;
+        private string lastname;
         private int age;
-        private int userID;
-        private bool management;
-        private bool medicalStaff;
-        private bool consultant;
+        private int userID;        
         private string phoneNumber;
         private string email;
+        private string nhsNumber;
+        private int bedsideNo;
+        private string gender;
 
         private float bloodPressureDiastollic;
         private float bloodPressureSystolic;
@@ -31,6 +32,116 @@ namespace SWE_Assignment
         private float tempLowerLimit;
         private float bPressureUpperLimit;
         private float bPressureLowerLimit;
+
+        public string LastName
+        {
+            get
+            {
+                return lastname;
+            }
+            set
+            {
+               lastname = value;
+            }
+        }
+
+        public string Gender
+        {
+            get
+            {
+                return gender;
+            }
+            set
+            {
+                gender = value;
+            }
+        }
+
+        public int BedsideNo
+        {
+            get
+            {
+                return bedsideNo;
+            }
+            set
+            {
+                bedsideNo = value;
+            }
+        }
+
+        public string NhsNumber
+        {
+            get
+            {
+                return nhsNumber;
+            }
+            set
+            {
+                nhsNumber = value;
+            }
+        }
+
+
+        public int Age
+        {
+            get
+            {
+                return age;
+            }
+            set
+            {
+                age = value;
+            }
+        }
+
+        public int UserID
+        {
+            get
+            {
+                return userID;
+            }
+            set
+            {
+                userID = value;
+            }
+        }
+
+        public string Email
+        {
+            get
+            {
+                return email;
+            }
+            set
+            {
+                email = value;
+            }
+        }
+
+        public float BreathingRate
+        {
+            get
+            {
+                return breathingRate;
+            }
+            set
+            {
+                breathingRate = value;
+            }
+        }
+
+     
+        public string PhoneNumber
+        {
+            get
+            {
+                return phoneNumber;
+            }
+            set
+            {
+                phoneNumber = value;
+            }
+        }
 
         public string PatientName
         {
@@ -90,6 +201,11 @@ namespace SWE_Assignment
             {
                 heartRate = value;
             }
+        }
+
+        public Bed(int patientNumber)
+        {
+            
         }
 
 

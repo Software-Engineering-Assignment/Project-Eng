@@ -97,9 +97,6 @@ namespace SWE_Assignment
                 Hide();// this hides the login page
             }
 
-
-
-
         }
 
     }

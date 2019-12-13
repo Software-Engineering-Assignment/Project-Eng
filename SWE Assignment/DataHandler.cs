@@ -71,7 +71,7 @@ namespace SWE_Assignment
         {
             
             //the query below finds the Username, password and management status of a user from the database.
-            string query = $"SELECT Username, Password, Management FROM Users WHERE Username = '{username}' AND Password = '{password}'";
+            string query = $"SELECT Username, Password, Management, User_ID FROM Users WHERE Username = '{username}' AND Password = '{password}'";
 
             openConnection();//this calls the method to open the connector
 
@@ -88,6 +88,8 @@ namespace SWE_Assignment
                     bool isMan = dataReader.GetBoolean(2);
                     boolValue = Convert.ToInt32(isMan);
 
+                    HospitalRoom.StaffID = dataReader.GetInt32(4);
+
                     closeConnection();
                     return boolValue;
                 }
@@ -97,8 +99,7 @@ namespace SWE_Assignment
                     return -1;
 
                 }
-            }
-            
+            }            
         }
 
         public void updateAlarmHistory()
@@ -116,9 +117,29 @@ namespace SWE_Assignment
 
         }
 
-        public void GetPatientInfo()
+        public void GetPatientInfo( ref Bed patient, int patientNumber)
         {
+            string query = "SELECT Patient_Name, Bedside_No, Age, Gender, Last_Name, NHS_Number FROM Patient WHERE Bedside_No = '{patientNumber}'";
 
+            openConnection();
+
+            SqlCommand command = new SqlCommand(query, sqlconnector);
+
+            using (SqlDataReader dataReader = command.ExecuteReader())
+            {
+                if (dataReader.Read())
+                {
+                    patient.PatientName = dataReader.GetString(0);
+                    patient.BedsideNo = dataReader.GetInt32(1);
+                    patient.Age = dataReader.GetInt32(2);
+                    patient.Gender = dataReader.GetString(3);
+                    patient.LastName = dataReader.GetString(4);
+                    patient.NhsNumber = dataReader.GetString(5);
+
+                }
+            }
+
+            closeConnection();
         }
     }
 }
