@@ -39,7 +39,10 @@ namespace SWE_Assignment
         {
             this.Hide();
             labelText = "BedSide 1";
-            
+            Alarm.bloodPressureAlarmRaised = 0;
+            Alarm.breathingRateAlarmRaised = 0;
+            Alarm.pulseRateAlarmRaised = 0;
+            Alarm.temperatureAlarmRaised = 0;
             PatientMenu.PatientMenuInstance.Show();
 
         }
@@ -48,6 +51,10 @@ namespace SWE_Assignment
         {
             this.Hide();
             labelText = "BedSide 2";
+            Alarm.bloodPressureAlarmRaised = 0;
+            Alarm.breathingRateAlarmRaised = 0;
+            Alarm.pulseRateAlarmRaised = 0;
+            Alarm.temperatureAlarmRaised = 0;
             //call patient menu populator 
             PatientMenu.PatientMenuInstance.Show();
         }
@@ -56,6 +63,10 @@ namespace SWE_Assignment
         {
             this.Hide();
             labelText = "BedSide 3";
+            Alarm.bloodPressureAlarmRaised = 0;
+            Alarm.breathingRateAlarmRaised = 0;
+            Alarm.pulseRateAlarmRaised = 0;
+            Alarm.temperatureAlarmRaised = 0;
             PatientMenu.PatientMenuInstance.Show();
         }
 
@@ -63,6 +74,10 @@ namespace SWE_Assignment
         {
             this.Hide();
             labelText = "BedSide 4";
+            Alarm.bloodPressureAlarmRaised = 0;
+            Alarm.breathingRateAlarmRaised = 0;
+            Alarm.pulseRateAlarmRaised = 0;
+            Alarm.temperatureAlarmRaised = 0;
             PatientMenu.PatientMenuInstance.Show();
         }
 
@@ -70,6 +85,10 @@ namespace SWE_Assignment
         {
             this.Hide();
             labelText = "BedSide 5";
+            Alarm.bloodPressureAlarmRaised = 0;
+            Alarm.breathingRateAlarmRaised = 0;
+            Alarm.pulseRateAlarmRaised = 0;
+            Alarm.temperatureAlarmRaised = 0;
             PatientMenu.PatientMenuInstance.Show();
         }
 
@@ -77,6 +96,10 @@ namespace SWE_Assignment
         {
             this.Hide();
             labelText = "BedSide 6";
+            Alarm.bloodPressureAlarmRaised = 0;
+            Alarm.breathingRateAlarmRaised = 0;
+            Alarm.pulseRateAlarmRaised = 0;
+            Alarm.temperatureAlarmRaised = 0;
             PatientMenu.PatientMenuInstance.Show();
         }
 
@@ -84,6 +107,10 @@ namespace SWE_Assignment
         {
             this.Hide();
             labelText = "BedSide 7";
+            Alarm.bloodPressureAlarmRaised = 0;
+            Alarm.breathingRateAlarmRaised = 0;
+            Alarm.pulseRateAlarmRaised = 0;
+            Alarm.temperatureAlarmRaised = 0;
             PatientMenu.PatientMenuInstance.Show();
         }
 
@@ -91,6 +118,10 @@ namespace SWE_Assignment
         {
             this.Hide();
             labelText = "BedSide 8";
+            Alarm.bloodPressureAlarmRaised = 0;
+            Alarm.breathingRateAlarmRaised = 0;
+            Alarm.pulseRateAlarmRaised = 0;
+            Alarm.temperatureAlarmRaised = 0;
             PatientMenu.PatientMenuInstance.Show();
         }
     }

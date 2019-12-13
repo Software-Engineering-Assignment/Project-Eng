@@ -61,7 +61,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="HospitalRoom.cs" />
+    <Compile Include="Alarm.cs" />
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
     </Compile>

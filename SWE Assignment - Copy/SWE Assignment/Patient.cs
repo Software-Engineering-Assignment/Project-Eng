@@ -126,7 +126,7 @@ namespace SWE_Assignment
         private void PulseRateGenerator(object sender, ElapsedEventArgs e)
         {
 
-            PulseRate = rnd.Next(EditAlarm.plLowerLimit -10, EditAlarm.plUpperLimit +10);
+            PulseRate = rnd.Next(EditAlarm.plLowerLimit -5, EditAlarm.plUpperLimit +5);
             Console.WriteLine(PulseRate);
         }
 

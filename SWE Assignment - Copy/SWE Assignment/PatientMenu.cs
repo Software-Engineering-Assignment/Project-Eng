@@ -30,6 +30,7 @@ namespace SWE_Assignment
         }
 
         Patient newPatient = Patient.Instance;
+        Alarm newAlarm = new Alarm();
         public static string getPatientName; 
         public static string getPatientLastName;
         public static string getPatientGender;
@@ -337,6 +338,7 @@ namespace SWE_Assignment
                     this.Invoke(new MethodInvoker(delegate ()
                     {
                         PulseRateMonitortingBox.Text = newPatient.PulseRate.ToString();
+                        newAlarm.PulseRateAlarm(newPatient.PulseRate);
                     }));
 
                     break;
@@ -344,6 +346,7 @@ namespace SWE_Assignment
                     this.Invoke(new MethodInvoker(delegate ()
                     {
                         BreathingRateMonitortingBox.Text = newPatient.BreathingRate.ToString();
+                        newAlarm.BreathingRateAlarm(newPatient.BreathingRate);
                     }));
                     
                     break;
@@ -351,6 +354,7 @@ namespace SWE_Assignment
                     this.Invoke(new MethodInvoker(delegate ()
                     {
                         TemperatureMonitortingBox.Text = newPatient.Temperature.ToString();
+                        newAlarm.TemperatureAlarm(newPatient.Temperature);
                     }));
                     break;
 
@@ -358,6 +362,7 @@ namespace SWE_Assignment
                     this.Invoke(new MethodInvoker(delegate ()
                     {
                         BloodPressureMonitortingBox.Text = newPatient.BloodPressure.ToString();
+                        newAlarm.BloodPressureAlarm(newPatient.BloodPressure);
                     }));
                     break;
             }

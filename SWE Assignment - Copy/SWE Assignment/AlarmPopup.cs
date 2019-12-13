@@ -12,9 +12,21 @@ namespace SWE_Assignment
 {
     public partial class AlarmPopup : Form
     {
+
+        private static AlarmPopup _AlarmInstance;
+        public static AlarmPopup AlarmInstance
+        {
+            get
+            {
+                if (_AlarmInstance == null)
+                    _AlarmInstance = new AlarmPopup();
+                return _AlarmInstance;
+            }
+        }
         public AlarmPopup()
         {
             InitializeComponent();
+            this.TopMost = true;
         }
 
         private void Form8_Load(object sender, EventArgs e)
@@ -25,7 +37,7 @@ namespace SWE_Assignment
 
         private void button1_Click(object sender, EventArgs e)
         {
-            this.Close();
+            this.Hide();
         }
 
         private void label2_Click(object sender, EventArgs e)
