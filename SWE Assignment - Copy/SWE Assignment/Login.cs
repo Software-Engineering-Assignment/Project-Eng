@@ -66,8 +66,38 @@ namespace SWE_Assignment
 
         private void button1_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            PatientSelection.PatientSelectionInstance.Show();
+            // this sets the values of these variables as the username and the password that the user inputs 
+            string username = textBox2.Text;
+            string password = password_txt.Text;
+
+
+            int loginVerified = DataHandler.Instance.ValidateLogin(username, password);//this calls the method from the datahandler class
+
+
+            //this if statement checks if the user is a manager or medical staff
+            if (loginVerified == 1)
+            {
+                //if the value for loginverified is 1 then the user is directed to the Management Menu page
+                ManagementMenu f5 = new ManagementMenu();
+                f5.Show();
+                Hide(); //this hides the login page (form 1)
+            }
+            else if (loginVerified == -1)
+            {
+                label3.Visible = true; //if the user enters the wrong username and password combination a prompt made visible, telling them to try again
+
+            }
+            else
+            {
+                //this else statement directs the user to the patient selection screen if the user is not a manager
+                this.Hide();
+                PatientSelection.PatientSelectionInstance.Show();
+            }
+
+
+            //this.Hide();
+            //PatientSelection.PatientSelectionInstance.Show();
+
         }
     }
 }

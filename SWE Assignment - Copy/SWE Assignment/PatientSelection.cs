@@ -43,6 +43,7 @@ namespace SWE_Assignment
             Alarm.breathingRateAlarmRaised = 0;
             Alarm.pulseRateAlarmRaised = 0;
             Alarm.temperatureAlarmRaised = 0;
+            PatientMenu.PatientMenuInstance.PatientMenueUpdater(1);
             PatientMenu.PatientMenuInstance.Show();
 
         }
@@ -56,6 +57,7 @@ namespace SWE_Assignment
             Alarm.pulseRateAlarmRaised = 0;
             Alarm.temperatureAlarmRaised = 0;
             //call patient menu populator 
+            PatientMenu.PatientMenuInstance.PatientMenueUpdater(2);
             PatientMenu.PatientMenuInstance.Show();
         }
 
@@ -67,6 +69,7 @@ namespace SWE_Assignment
             Alarm.breathingRateAlarmRaised = 0;
             Alarm.pulseRateAlarmRaised = 0;
             Alarm.temperatureAlarmRaised = 0;
+            PatientMenu.PatientMenuInstance.PatientMenueUpdater(3);
             PatientMenu.PatientMenuInstance.Show();
         }
 
@@ -78,6 +81,7 @@ namespace SWE_Assignment
             Alarm.breathingRateAlarmRaised = 0;
             Alarm.pulseRateAlarmRaised = 0;
             Alarm.temperatureAlarmRaised = 0;
+            PatientMenu.PatientMenuInstance.PatientMenueUpdater(4);
             PatientMenu.PatientMenuInstance.Show();
         }
 
@@ -89,6 +93,7 @@ namespace SWE_Assignment
             Alarm.breathingRateAlarmRaised = 0;
             Alarm.pulseRateAlarmRaised = 0;
             Alarm.temperatureAlarmRaised = 0;
+            PatientMenu.PatientMenuInstance.PatientMenueUpdater(5);
             PatientMenu.PatientMenuInstance.Show();
         }
 
@@ -100,6 +105,7 @@ namespace SWE_Assignment
             Alarm.breathingRateAlarmRaised = 0;
             Alarm.pulseRateAlarmRaised = 0;
             Alarm.temperatureAlarmRaised = 0;
+            PatientMenu.PatientMenuInstance.PatientMenueUpdater(6);
             PatientMenu.PatientMenuInstance.Show();
         }
 
@@ -111,6 +117,7 @@ namespace SWE_Assignment
             Alarm.breathingRateAlarmRaised = 0;
             Alarm.pulseRateAlarmRaised = 0;
             Alarm.temperatureAlarmRaised = 0;
+            PatientMenu.PatientMenuInstance.PatientMenueUpdater(7);
             PatientMenu.PatientMenuInstance.Show();
         }
 
@@ -122,7 +129,9 @@ namespace SWE_Assignment
             Alarm.breathingRateAlarmRaised = 0;
             Alarm.pulseRateAlarmRaised = 0;
             Alarm.temperatureAlarmRaised = 0;
+            PatientMenu.PatientMenuInstance.PatientMenueUpdater(8);
             PatientMenu.PatientMenuInstance.Show();
+
         }
     }
 }

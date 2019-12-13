@@ -61,7 +61,7 @@ namespace SWE_Assignment
 
             
 
-            label1.Text = PatientSelection.labelText;
+            //label1.Text = PatientSelection.labelText;
 
 
             panel14.Location = new Point(0, 0);
@@ -366,6 +366,49 @@ namespace SWE_Assignment
                     }));
                     break;
             }
+        }
+
+        public void PatientMenueUpdater(int i)
+        {
+            switch (i)
+            {
+                case 1:
+                    label1.Text = "BedSide 1";
+                    PatientMenuControlUpdater(1);
+                    break;
+                case 2:
+                    label1.Text = "BedSide 2";
+                    PatientMenuControlUpdater(2);
+                    break;
+                case 3:
+                    label1.Text = "BedSide 3";
+                    PatientMenuControlUpdater(3);
+                    break;
+                case 4:
+                    label1.Text = "BedSide 4";
+                    PatientMenuControlUpdater(4);
+                    break;
+                case 5:
+                    label1.Text = "BedSide 5";
+                    PatientMenuControlUpdater(5);
+                    break;
+                case 6:
+                    label1.Text = "BedSide 6";
+                    PatientMenuControlUpdater(6);
+                    break;
+                case 7:
+                    label1.Text = "BedSide 7";
+                    PatientMenuControlUpdater(7);
+                    break;
+                case 8:
+                    label1.Text = "BedSide 8";
+                    PatientMenuControlUpdater(8);
+                    break;
+            }
+        }
+
+        private void PatientMenuControlUpdater(int i)
+        {
         }
     }
 }
