@@ -24,14 +24,14 @@ namespace SWE_Assignment
             }
         }
         private static int btClicked = 0;
-        public static int plLowerLimit = 90;
-        public static int plUpperLimit = 120;
-        public static int bpUpperLimit = 220;
-        public static int bpLowerLimit = 200;
-        public static int brUpperLimit = 90;
-        public static int brLowerLimit = 95;
-        public static int tUpperLimit = 120;
-        public static int tLowerLimit = 90;
+        public static int plLowerLimit;
+        public static int plUpperLimit;
+        public static int bpUpperLimit;
+        public static int bpLowerLimit;
+        public static int brUpperLimit;
+        public static int brLowerLimit;
+        public static int tUpperLimit;
+        public static int tLowerLimit;
         private int lowerLimit;
         private int upperLimit;
         private static string text;
@@ -39,10 +39,6 @@ namespace SWE_Assignment
         public EditAlarm()
         {
             InitializeComponent();
-            CurrentPulseRateBox.Text = plLowerLimit.ToString() + "      " + plUpperLimit.ToString();
-            CurrentBloodPressureBox.Text = bpLowerLimit.ToString() + "      " + bpUpperLimit.ToString();
-            CurrentBreathingRateBox.Text = brLowerLimit.ToString() + "      " + brUpperLimit.ToString();
-            CurrentTemperatureBox.Text = tLowerLimit.ToString() + "      " + tUpperLimit.ToString();
             PulseRatePanel.Location = new Point(370, 135);
             BloodPressurePanle.Location = new Point(370, 135);
             BreathingRatePanel.Location = new Point(370, 135);
@@ -264,7 +260,7 @@ namespace SWE_Assignment
                         break;
                     case 3:
                         Int32.TryParse(LowerLimitBreathingRateBox.Text, out brLowerLimit);
-                        Int32.TryParse(UpperLimitBreathingRateBox.Text, out brLowerLimit);
+                        Int32.TryParse(UpperLimitBreathingRateBox.Text, out brUpperLimit);
                         break;
                     case 4:
                         Int32.TryParse(LowerLimitTemperatureBox.Text, out tLowerLimit);
@@ -311,16 +307,20 @@ namespace SWE_Assignment
         private void DefaultAlarmUpdater(int i)
         {
             DataTable dataTable = DataHandler.Instance.PatientUpdater(i);
-            LowerLimitPulseRateBox.Text = dataTable.Rows[0][9].ToString();
-            UpperLimitPulseRateBox.Text = dataTable.Rows[0][10].ToString();
-            LowerLimitBloodPressureBox.Text = dataTable.Rows[0][11].ToString();
-            UpperLimitBloodPressureBox.Text = dataTable.Rows[0][12].ToString();
-            LowerLimitBreathingRateBox.Text = dataTable.Rows[0][13].ToString();
-            UpperLimitBreathingRateBox.Text = dataTable.Rows[0][14].ToString();
-            LowerLimitTemperatureBox.Text = dataTable.Rows[0][15].ToString();
-            UpperLimitTemperatureBox.Text = dataTable.Rows[0][16].ToString();
+            CurrentPulseRateBox.Text = dataTable.Rows[0][8].ToString() + "       " + dataTable.Rows[0][9].ToString();
+            CurrentBloodPressureBox.Text = dataTable.Rows[0][10] + "       " + dataTable.Rows[0][11].ToString();
+            CurrentBreathingRateBox.Text = dataTable.Rows[0][12] + "       " + dataTable.Rows[0][13].ToString();
+            CurrentTemperatureBox.Text = dataTable.Rows[0][14] + "       " + dataTable.Rows[0][15].ToString();
+            plLowerLimit = Convert.ToInt32(dataTable.Rows[0][8]);
+            plUpperLimit = Convert.ToInt32(dataTable.Rows[0][9]);
+            bpLowerLimit = Convert.ToInt32(dataTable.Rows[0][10]);
+            bpUpperLimit = Convert.ToInt32(dataTable.Rows[0][11]);
+            brLowerLimit = Convert.ToInt32(dataTable.Rows[0][12]);
+            brUpperLimit = Convert.ToInt32(dataTable.Rows[0][13]);
+            tLowerLimit = Convert.ToInt32(dataTable.Rows[0][14]);
+            tUpperLimit = Convert.ToInt32(dataTable.Rows[0][15]);
+
         }
 
-        //a method to regonizes our limit violation and raise a number to alert user;
     }
 }

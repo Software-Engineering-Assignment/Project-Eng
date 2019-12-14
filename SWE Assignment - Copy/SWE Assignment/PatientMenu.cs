@@ -51,7 +51,7 @@ namespace SWE_Assignment
         {
             InitializeComponent();
             newPatient.PropertyChanged += _TextBox_PropertyChanged;
-            newPatient.PatientDetailPopulator();
+            //newPatient.PatientDetailPopulator();
             PatientFirstNameBox.Text = getPatientName;
             PatientLastNameBox.Text = getPatientLastName;
             PatientGenderBox.Text = getPatientGender;
@@ -408,8 +408,8 @@ namespace SWE_Assignment
             PatientDateofBirthBox.Text = dataTable.Rows[0][3].ToString();
             PatientGenderBox.Text = dataTable.Rows[0][4].ToString();
             PatientNHSNumber.Text = dataTable.Rows[0][5].ToString();
-            //PatientHeightBox.Text = dataTable.Rows[0][6].ToString();
-            //PatientWeightBox.Text = dataTable.Rows[0][7].ToString();
+            PatientHeightBox.Text = dataTable.Rows[0][6].ToString();
+            PatientWeightBox.Text = dataTable.Rows[0][7].ToString();
         }
     }
 }

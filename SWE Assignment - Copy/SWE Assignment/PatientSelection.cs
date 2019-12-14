@@ -41,7 +41,7 @@ namespace SWE_Assignment
             Alarm.breathingRateAlarmRaised = 0;
             Alarm.pulseRateAlarmRaised = 0;
             Alarm.temperatureAlarmRaised = 0;
-            //EditAlarm.EditAlarmInstance.SetDefaultAlarm(1);
+            EditAlarm.EditAlarmInstance.SetDefaultAlarm(1);
             PatientMenu.PatientMenuInstance.PatientMenueUpdater(1);
             PatientMenu.PatientMenuInstance.Show();
 
@@ -54,7 +54,7 @@ namespace SWE_Assignment
             Alarm.breathingRateAlarmRaised = 0;
             Alarm.pulseRateAlarmRaised = 0;
             Alarm.temperatureAlarmRaised = 0;
-            //EditAlarm.EditAlarmInstance.SetDefaultAlarm(2);
+            EditAlarm.EditAlarmInstance.SetDefaultAlarm(2);
             PatientMenu.PatientMenuInstance.PatientMenueUpdater(2);
             PatientMenu.PatientMenuInstance.Show();
         }
@@ -66,7 +66,7 @@ namespace SWE_Assignment
             Alarm.breathingRateAlarmRaised = 0;
             Alarm.pulseRateAlarmRaised = 0;
             Alarm.temperatureAlarmRaised = 0;
-            //EditAlarm.EditAlarmInstance.SetDefaultAlarm(3);
+            EditAlarm.EditAlarmInstance.SetDefaultAlarm(3);
             PatientMenu.PatientMenuInstance.PatientMenueUpdater(3);
             PatientMenu.PatientMenuInstance.Show();
         }
@@ -78,7 +78,7 @@ namespace SWE_Assignment
             Alarm.breathingRateAlarmRaised = 0;
             Alarm.pulseRateAlarmRaised = 0;
             Alarm.temperatureAlarmRaised = 0;
-            //EditAlarm.EditAlarmInstance.SetDefaultAlarm(4);
+            EditAlarm.EditAlarmInstance.SetDefaultAlarm(4);
             PatientMenu.PatientMenuInstance.PatientMenueUpdater(4);
             PatientMenu.PatientMenuInstance.Show();
         }
@@ -90,7 +90,7 @@ namespace SWE_Assignment
             Alarm.breathingRateAlarmRaised = 0;
             Alarm.pulseRateAlarmRaised = 0;
             Alarm.temperatureAlarmRaised = 0;
-            //EditAlarm.EditAlarmInstance.SetDefaultAlarm(5);
+            EditAlarm.EditAlarmInstance.SetDefaultAlarm(5);
             PatientMenu.PatientMenuInstance.PatientMenueUpdater(5);
             PatientMenu.PatientMenuInstance.Show();
         }
@@ -102,7 +102,7 @@ namespace SWE_Assignment
             Alarm.breathingRateAlarmRaised = 0;
             Alarm.pulseRateAlarmRaised = 0;
             Alarm.temperatureAlarmRaised = 0;
-            //EditAlarm.EditAlarmInstance.SetDefaultAlarm(6);
+            EditAlarm.EditAlarmInstance.SetDefaultAlarm(6);
             PatientMenu.PatientMenuInstance.PatientMenueUpdater(6);
             PatientMenu.PatientMenuInstance.Show();
         }
@@ -114,7 +114,7 @@ namespace SWE_Assignment
             Alarm.breathingRateAlarmRaised = 0;
             Alarm.pulseRateAlarmRaised = 0;
             Alarm.temperatureAlarmRaised = 0;
-            //EditAlarm.EditAlarmInstance.SetDefaultAlarm(7);
+            EditAlarm.EditAlarmInstance.SetDefaultAlarm(7);
             PatientMenu.PatientMenuInstance.PatientMenueUpdater(7);
             PatientMenu.PatientMenuInstance.Show();
         }
@@ -126,7 +126,7 @@ namespace SWE_Assignment
             Alarm.breathingRateAlarmRaised = 0;
             Alarm.pulseRateAlarmRaised = 0;
             Alarm.temperatureAlarmRaised = 0;
-            //EditAlarm.EditAlarmInstance.SetDefaultAlarm(8);
+            EditAlarm.EditAlarmInstance.SetDefaultAlarm(8);
             PatientMenu.PatientMenuInstance.PatientMenueUpdater(8);
             PatientMenu.PatientMenuInstance.Show();
 
