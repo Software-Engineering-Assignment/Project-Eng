@@ -44,5 +44,26 @@ namespace SWE_Assignment
         {
 
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+        }
+
+        public void RaiseAlarm(int i)
+        {
+            switch (i)
+            {
+                case 1:
+                    this.Hide();
+                    panel2.BringToFront();
+                    AlarmInstance.Show();
+                    break;
+                case 2:
+                    panel1.BringToFront();
+                    AlarmInstance.Show();
+                    break;
+            }
+        }
     }
 }

@@ -116,6 +116,17 @@ namespace SWE_Assignment
 
         }
 
+        public DataTable PatientUpdater(int i)
+        {
+            DataTable table = new DataTable();
+            string query = "Select * From Patient where Bedside_No='" + i + "'";
+            openConnection();
+            SqlDataAdapter infoTable = new SqlDataAdapter("Select * From Patient where Bedside_No='" + i + "'", DBConnectionString);
+            infoTable.SelectCommand = new SqlCommand(query, sqlconnector);
+            infoTable.Fill(table);
+            return table;
+        }
+
         //public void GetPatientInfo(ref Bed patient, int patientNumber)
         //{
         //    string query = "SELECT Patient_Name, Bedside_No, Age, Gender, Last_Name, NHS_Number FROM Patient WHERE Bedside_No = '{patientNumber}'";

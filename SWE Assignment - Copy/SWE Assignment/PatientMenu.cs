@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Threading;
+using System.Data.SqlClient;
 
 
 namespace SWE_Assignment
@@ -49,7 +50,6 @@ namespace SWE_Assignment
         public PatientMenu()
         {
             InitializeComponent();
-            //newPatient.PropertyChanged += _PulseRate_PropertyChanged;
             newPatient.PropertyChanged += _TextBox_PropertyChanged;
             newPatient.PatientDetailPopulator();
             PatientFirstNameBox.Text = getPatientName;
@@ -373,42 +373,43 @@ namespace SWE_Assignment
             switch (i)
             {
                 case 1:
-                    label1.Text = "BedSide 1";
-                    PatientMenuControlUpdater(1);
+                    ControlUpdater(1);
                     break;
                 case 2:
-                    label1.Text = "BedSide 2";
-                    PatientMenuControlUpdater(2);
+                    ControlUpdater(2);
                     break;
                 case 3:
-                    label1.Text = "BedSide 3";
-                    PatientMenuControlUpdater(3);
+                    ControlUpdater(3);
                     break;
                 case 4:
-                    label1.Text = "BedSide 4";
-                    PatientMenuControlUpdater(4);
+                    ControlUpdater(4);
                     break;
                 case 5:
-                    label1.Text = "BedSide 5";
-                    PatientMenuControlUpdater(5);
+                    ControlUpdater(5);
                     break;
                 case 6:
-                    label1.Text = "BedSide 6";
-                    PatientMenuControlUpdater(6);
+                    ControlUpdater(6);
                     break;
                 case 7:
-                    label1.Text = "BedSide 7";
-                    PatientMenuControlUpdater(7);
+                    ControlUpdater(7);
                     break;
                 case 8:
-                    label1.Text = "BedSide 8";
-                    PatientMenuControlUpdater(8);
+                    ControlUpdater(8);
                     break;
             }
         }
 
-        private void PatientMenuControlUpdater(int i)
+        private void ControlUpdater(int i)
         {
+            DataTable dataTable = DataHandler.Instance.PatientUpdater(i);
+            PatientFirstNameBox.Text = dataTable.Rows[0][0].ToString();
+            label1.Text = "BedSide " + dataTable.Rows[0][1].ToString();
+            PatientLastNameBox.Text = dataTable.Rows[0][2].ToString();
+            PatientDateofBirthBox.Text = dataTable.Rows[0][3].ToString();
+            PatientGenderBox.Text = dataTable.Rows[0][4].ToString();
+            PatientNHSNumber.Text = dataTable.Rows[0][5].ToString();
+            //PatientHeightBox.Text = dataTable.Rows[0][6].ToString();
+            //PatientWeightBox.Text = dataTable.Rows[0][7].ToString();
         }
     }
 }

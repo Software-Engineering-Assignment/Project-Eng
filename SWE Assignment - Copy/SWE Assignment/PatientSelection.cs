@@ -12,7 +12,6 @@ namespace SWE_Assignment
 {
     public partial class PatientSelection : Form
     {
-        public static string labelText = "";
 
         private static PatientSelection _PatientSelectionInstance;
 
@@ -38,11 +37,11 @@ namespace SWE_Assignment
         private void button1_Click(object sender, EventArgs e)
         {
             this.Hide();
-            labelText = "BedSide 1";
             Alarm.bloodPressureAlarmRaised = 0;
             Alarm.breathingRateAlarmRaised = 0;
             Alarm.pulseRateAlarmRaised = 0;
             Alarm.temperatureAlarmRaised = 0;
+            //EditAlarm.EditAlarmInstance.SetDefaultAlarm(1);
             PatientMenu.PatientMenuInstance.PatientMenueUpdater(1);
             PatientMenu.PatientMenuInstance.Show();
 
@@ -51,12 +50,11 @@ namespace SWE_Assignment
         private void button2_Click(object sender, EventArgs e)
         {
             this.Hide();
-            labelText = "BedSide 2";
             Alarm.bloodPressureAlarmRaised = 0;
             Alarm.breathingRateAlarmRaised = 0;
             Alarm.pulseRateAlarmRaised = 0;
             Alarm.temperatureAlarmRaised = 0;
-            //call patient menu populator 
+            //EditAlarm.EditAlarmInstance.SetDefaultAlarm(2);
             PatientMenu.PatientMenuInstance.PatientMenueUpdater(2);
             PatientMenu.PatientMenuInstance.Show();
         }
@@ -64,11 +62,11 @@ namespace SWE_Assignment
         private void button3_Click(object sender, EventArgs e)
         {
             this.Hide();
-            labelText = "BedSide 3";
             Alarm.bloodPressureAlarmRaised = 0;
             Alarm.breathingRateAlarmRaised = 0;
             Alarm.pulseRateAlarmRaised = 0;
             Alarm.temperatureAlarmRaised = 0;
+            //EditAlarm.EditAlarmInstance.SetDefaultAlarm(3);
             PatientMenu.PatientMenuInstance.PatientMenueUpdater(3);
             PatientMenu.PatientMenuInstance.Show();
         }
@@ -76,11 +74,11 @@ namespace SWE_Assignment
         private void button4_Click(object sender, EventArgs e)
         {
             this.Hide();
-            labelText = "BedSide 4";
             Alarm.bloodPressureAlarmRaised = 0;
             Alarm.breathingRateAlarmRaised = 0;
             Alarm.pulseRateAlarmRaised = 0;
             Alarm.temperatureAlarmRaised = 0;
+            //EditAlarm.EditAlarmInstance.SetDefaultAlarm(4);
             PatientMenu.PatientMenuInstance.PatientMenueUpdater(4);
             PatientMenu.PatientMenuInstance.Show();
         }
@@ -88,11 +86,11 @@ namespace SWE_Assignment
         private void button5_Click(object sender, EventArgs e)
         {
             this.Hide();
-            labelText = "BedSide 5";
             Alarm.bloodPressureAlarmRaised = 0;
             Alarm.breathingRateAlarmRaised = 0;
             Alarm.pulseRateAlarmRaised = 0;
             Alarm.temperatureAlarmRaised = 0;
+            //EditAlarm.EditAlarmInstance.SetDefaultAlarm(5);
             PatientMenu.PatientMenuInstance.PatientMenueUpdater(5);
             PatientMenu.PatientMenuInstance.Show();
         }
@@ -100,11 +98,11 @@ namespace SWE_Assignment
         private void button6_Click(object sender, EventArgs e)
         {
             this.Hide();
-            labelText = "BedSide 6";
             Alarm.bloodPressureAlarmRaised = 0;
             Alarm.breathingRateAlarmRaised = 0;
             Alarm.pulseRateAlarmRaised = 0;
             Alarm.temperatureAlarmRaised = 0;
+            //EditAlarm.EditAlarmInstance.SetDefaultAlarm(6);
             PatientMenu.PatientMenuInstance.PatientMenueUpdater(6);
             PatientMenu.PatientMenuInstance.Show();
         }
@@ -112,11 +110,11 @@ namespace SWE_Assignment
         private void button7_Click(object sender, EventArgs e)
         {
             this.Hide();
-            labelText = "BedSide 7";
             Alarm.bloodPressureAlarmRaised = 0;
             Alarm.breathingRateAlarmRaised = 0;
             Alarm.pulseRateAlarmRaised = 0;
             Alarm.temperatureAlarmRaised = 0;
+            //EditAlarm.EditAlarmInstance.SetDefaultAlarm(7);
             PatientMenu.PatientMenuInstance.PatientMenueUpdater(7);
             PatientMenu.PatientMenuInstance.Show();
         }
@@ -124,11 +122,11 @@ namespace SWE_Assignment
         private void button8_Click(object sender, EventArgs e)
         {
             this.Hide();
-            labelText = "BedSide 8";
             Alarm.bloodPressureAlarmRaised = 0;
             Alarm.breathingRateAlarmRaised = 0;
             Alarm.pulseRateAlarmRaised = 0;
             Alarm.temperatureAlarmRaised = 0;
+            //EditAlarm.EditAlarmInstance.SetDefaultAlarm(8);
             PatientMenu.PatientMenuInstance.PatientMenueUpdater(8);
             PatientMenu.PatientMenuInstance.Show();
 
@@ -138,6 +136,11 @@ namespace SWE_Assignment
         {
             this.Hide();
             Login.Instance.Show();
+        }
+
+        private void panel3_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

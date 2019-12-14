@@ -277,6 +277,50 @@ namespace SWE_Assignment
 
         }
 
+        public void SetDefaultAlarm(int i)
+        {
+            switch (i)
+            {
+                case 1:
+                    DefaultAlarmUpdater(1);
+                    break;
+                case 2:
+                    DefaultAlarmUpdater(2);
+                    break;
+                case 3:
+                    DefaultAlarmUpdater(3);
+                    break;
+                case 4:
+                    DefaultAlarmUpdater(4);
+                    break;
+                case 5:
+                    DefaultAlarmUpdater(5);
+                    break;
+                case 6:
+                    DefaultAlarmUpdater(6);
+                    break;
+                case 7:
+                    DefaultAlarmUpdater(7);
+                    break;
+                case 8:
+                    DefaultAlarmUpdater(8);
+                    break;
+            }
+        }
+        
+        private void DefaultAlarmUpdater(int i)
+        {
+            DataTable dataTable = DataHandler.Instance.PatientUpdater(i);
+            LowerLimitPulseRateBox.Text = dataTable.Rows[0][9].ToString();
+            UpperLimitPulseRateBox.Text = dataTable.Rows[0][10].ToString();
+            LowerLimitBloodPressureBox.Text = dataTable.Rows[0][11].ToString();
+            UpperLimitBloodPressureBox.Text = dataTable.Rows[0][12].ToString();
+            LowerLimitBreathingRateBox.Text = dataTable.Rows[0][13].ToString();
+            UpperLimitBreathingRateBox.Text = dataTable.Rows[0][14].ToString();
+            LowerLimitTemperatureBox.Text = dataTable.Rows[0][15].ToString();
+            UpperLimitTemperatureBox.Text = dataTable.Rows[0][16].ToString();
+        }
+
         //a method to regonizes our limit violation and raise a number to alert user;
     }
 }

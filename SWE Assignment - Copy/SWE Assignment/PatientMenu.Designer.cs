@@ -45,6 +45,8 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel7 = new System.Windows.Forms.Panel();
             this.panel8 = new System.Windows.Forms.Panel();
+            this.PatientNHSNumber = new System.Windows.Forms.TextBox();
+            this.label16 = new System.Windows.Forms.Label();
             this.panel9 = new System.Windows.Forms.Panel();
             this.panel14 = new System.Windows.Forms.Panel();
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
@@ -306,6 +308,8 @@
             // panel8
             // 
             this.panel8.BackColor = System.Drawing.SystemColors.Control;
+            this.panel8.Controls.Add(this.PatientNHSNumber);
+            this.panel8.Controls.Add(this.label16);
             this.panel8.Controls.Add(this.panel9);
             this.panel8.Controls.Add(this.PatientWeightBox);
             this.panel8.Controls.Add(this.PatientHeightBox);
@@ -319,11 +323,32 @@
             this.panel8.Controls.Add(this.label4);
             this.panel8.Controls.Add(this.label3);
             this.panel8.Controls.Add(this.label2);
-            this.panel8.Location = new System.Drawing.Point(13, 47);
+            this.panel8.Location = new System.Drawing.Point(14, 47);
             this.panel8.Margin = new System.Windows.Forms.Padding(4);
             this.panel8.Name = "panel8";
             this.panel8.Size = new System.Drawing.Size(847, 513);
             this.panel8.TabIndex = 2;
+            // 
+            // PatientNHSNumber
+            // 
+            this.PatientNHSNumber.BackColor = System.Drawing.SystemColors.Control;
+            this.PatientNHSNumber.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.PatientNHSNumber.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PatientNHSNumber.Location = new System.Drawing.Point(207, 310);
+            this.PatientNHSNumber.Margin = new System.Windows.Forms.Padding(4);
+            this.PatientNHSNumber.Name = "PatientNHSNumber";
+            this.PatientNHSNumber.ReadOnly = true;
+            this.PatientNHSNumber.Size = new System.Drawing.Size(267, 20);
+            this.PatientNHSNumber.TabIndex = 54;
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Location = new System.Drawing.Point(74, 313);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(91, 17);
+            this.label16.TabIndex = 53;
+            this.label16.Text = "NHS Number";
             // 
             // panel9
             // 
@@ -332,7 +357,7 @@
             this.panel9.Controls.Add(this.panel12);
             this.panel9.Controls.Add(this.panel11);
             this.panel9.Controls.Add(this.panel10);
-            this.panel9.Location = new System.Drawing.Point(54, 84);
+            this.panel9.Location = new System.Drawing.Point(669, 289);
             this.panel9.Margin = new System.Windows.Forms.Padding(4);
             this.panel9.Name = "panel9";
             this.panel9.Size = new System.Drawing.Size(847, 513);
@@ -651,7 +676,7 @@
             this.PatientWeightBox.BackColor = System.Drawing.SystemColors.Control;
             this.PatientWeightBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.PatientWeightBox.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PatientWeightBox.Location = new System.Drawing.Point(207, 361);
+            this.PatientWeightBox.Location = new System.Drawing.Point(207, 407);
             this.PatientWeightBox.Margin = new System.Windows.Forms.Padding(4);
             this.PatientWeightBox.Name = "PatientWeightBox";
             this.PatientWeightBox.ReadOnly = true;
@@ -663,7 +688,7 @@
             this.PatientHeightBox.BackColor = System.Drawing.SystemColors.Control;
             this.PatientHeightBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.PatientHeightBox.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PatientHeightBox.Location = new System.Drawing.Point(207, 311);
+            this.PatientHeightBox.Location = new System.Drawing.Point(207, 357);
             this.PatientHeightBox.Margin = new System.Windows.Forms.Padding(4);
             this.PatientHeightBox.Name = "PatientHeightBox";
             this.PatientHeightBox.ReadOnly = true;
@@ -723,7 +748,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(75, 361);
+            this.label7.Location = new System.Drawing.Point(68, 404);
             this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(59, 21);
@@ -734,7 +759,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(71, 311);
+            this.label6.Location = new System.Drawing.Point(71, 357);
             this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(56, 21);
@@ -1098,5 +1123,7 @@
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.PictureBox pictureBox4;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.TextBox PatientNHSNumber;
     }
 }

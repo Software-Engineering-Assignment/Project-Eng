@@ -48,13 +48,18 @@ namespace SWE_Assignment
 
         public void TemperatureAlarm(int i)
         {
-            if (i < EditAlarm.tLowerLimit || i > EditAlarm.tUpperLimit)
+
+            if (i == 0 )
             {
                 temperatureAlarmRaised++;
-                AlarmPopup.AlarmInstance.Show();
+                AlarmPopup.AlarmInstance.RaiseAlarm(1);
+            }
+            else if (i < EditAlarm.tLowerLimit || i > EditAlarm.tUpperLimit)
+            {
+                temperatureAlarmRaised++;
+                AlarmPopup.AlarmInstance.RaiseAlarm(2);
                 Console.WriteLine("Temperature alarm Has been Raised {0} times", temperatureAlarmRaised);
             }
         }
-        
     }
 }
