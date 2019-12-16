@@ -12,9 +12,10 @@ namespace SWE_Assignment
 {
     public partial class PatientSelection : Form
     {
-
+        //Implementing singleton pattern to only have one instance of the class
         private static PatientSelection _PatientSelectionInstance;
 
+        //checks if there already is an instance of the class if not it creates one and returns it
         public static PatientSelection PatientSelectionInstance { 
             get{
                 if (_PatientSelectionInstance == null)
@@ -37,12 +38,20 @@ namespace SWE_Assignment
         private void button1_Click(object sender, EventArgs e)
         {
             this.Hide();
+
+            //Sets alarm values to zero so that each monitoring session will be distinct
             Alarm.bloodPressureAlarmRaised = 0;
             Alarm.breathingRateAlarmRaised = 0;
             Alarm.pulseRateAlarmRaised = 0;
             Alarm.temperatureAlarmRaised = 0;
-            EditAlarm.EditAlarmInstance.SetDefaultAlarm(1);
-            PatientMenu.PatientMenuInstance.PatientMenueUpdater(1);
+
+            //Gets the default value of lower limits and upper limits base on patient selected from database
+            EditAlarm.EditAlarmInstance.DefaultAlarmUpdater(1);
+
+            //Gets the patinet information from the database and updates the UI
+            PatientMenu.PatientMenuInstance.ControlUpdater(1);
+
+            //Gets the patients instance and will show it
             PatientMenu.PatientMenuInstance.Show();
 
         }
@@ -54,8 +63,8 @@ namespace SWE_Assignment
             Alarm.breathingRateAlarmRaised = 0;
             Alarm.pulseRateAlarmRaised = 0;
             Alarm.temperatureAlarmRaised = 0;
-            EditAlarm.EditAlarmInstance.SetDefaultAlarm(2);
-            PatientMenu.PatientMenuInstance.PatientMenueUpdater(2);
+            EditAlarm.EditAlarmInstance.DefaultAlarmUpdater(2);
+            PatientMenu.PatientMenuInstance.ControlUpdater(2);
             PatientMenu.PatientMenuInstance.Show();
         }
 
@@ -66,8 +75,8 @@ namespace SWE_Assignment
             Alarm.breathingRateAlarmRaised = 0;
             Alarm.pulseRateAlarmRaised = 0;
             Alarm.temperatureAlarmRaised = 0;
-            EditAlarm.EditAlarmInstance.SetDefaultAlarm(3);
-            PatientMenu.PatientMenuInstance.PatientMenueUpdater(3);
+            EditAlarm.EditAlarmInstance.DefaultAlarmUpdater(3);
+            PatientMenu.PatientMenuInstance.ControlUpdater(3);
             PatientMenu.PatientMenuInstance.Show();
         }
 
@@ -78,8 +87,8 @@ namespace SWE_Assignment
             Alarm.breathingRateAlarmRaised = 0;
             Alarm.pulseRateAlarmRaised = 0;
             Alarm.temperatureAlarmRaised = 0;
-            EditAlarm.EditAlarmInstance.SetDefaultAlarm(4);
-            PatientMenu.PatientMenuInstance.PatientMenueUpdater(4);
+            EditAlarm.EditAlarmInstance.DefaultAlarmUpdater(4);
+            PatientMenu.PatientMenuInstance.ControlUpdater(4);
             PatientMenu.PatientMenuInstance.Show();
         }
 
@@ -90,8 +99,8 @@ namespace SWE_Assignment
             Alarm.breathingRateAlarmRaised = 0;
             Alarm.pulseRateAlarmRaised = 0;
             Alarm.temperatureAlarmRaised = 0;
-            EditAlarm.EditAlarmInstance.SetDefaultAlarm(5);
-            PatientMenu.PatientMenuInstance.PatientMenueUpdater(5);
+            EditAlarm.EditAlarmInstance.DefaultAlarmUpdater(5);
+            PatientMenu.PatientMenuInstance.ControlUpdater(5);
             PatientMenu.PatientMenuInstance.Show();
         }
 
@@ -102,8 +111,8 @@ namespace SWE_Assignment
             Alarm.breathingRateAlarmRaised = 0;
             Alarm.pulseRateAlarmRaised = 0;
             Alarm.temperatureAlarmRaised = 0;
-            EditAlarm.EditAlarmInstance.SetDefaultAlarm(6);
-            PatientMenu.PatientMenuInstance.PatientMenueUpdater(6);
+            EditAlarm.EditAlarmInstance.DefaultAlarmUpdater(6);
+            PatientMenu.PatientMenuInstance.ControlUpdater(6);
             PatientMenu.PatientMenuInstance.Show();
         }
 
@@ -114,8 +123,8 @@ namespace SWE_Assignment
             Alarm.breathingRateAlarmRaised = 0;
             Alarm.pulseRateAlarmRaised = 0;
             Alarm.temperatureAlarmRaised = 0;
-            EditAlarm.EditAlarmInstance.SetDefaultAlarm(7);
-            PatientMenu.PatientMenuInstance.PatientMenueUpdater(7);
+            EditAlarm.EditAlarmInstance.DefaultAlarmUpdater(7);
+            PatientMenu.PatientMenuInstance.ControlUpdater(7);
             PatientMenu.PatientMenuInstance.Show();
         }
 
@@ -126,14 +135,15 @@ namespace SWE_Assignment
             Alarm.breathingRateAlarmRaised = 0;
             Alarm.pulseRateAlarmRaised = 0;
             Alarm.temperatureAlarmRaised = 0;
-            EditAlarm.EditAlarmInstance.SetDefaultAlarm(8);
-            PatientMenu.PatientMenuInstance.PatientMenueUpdater(8);
+            EditAlarm.EditAlarmInstance.DefaultAlarmUpdater(8);
+            PatientMenu.PatientMenuInstance.ControlUpdater(8);
             PatientMenu.PatientMenuInstance.Show();
 
         }
 
         private void button9_Click(object sender, EventArgs e)
         {
+            //Log out button, will get the instance of the login and show it the user.
             this.Hide();
             Login.Instance.Show();
         }

@@ -9,14 +9,16 @@ using System.Timers;
 namespace SWE_Assignment
 {
 
-
+    //implementing INotifyPropertyChanged to allow us to tell the other classes about the changes that we want
     class Patient : INotifyPropertyChanged
     {
-
+        //Creating new instane of the random class
         Random rnd = new Random();
 
-
+        //Declaring properties
         private int _pulseRate;
+
+        //If the value changes it will trigger the event
         public int PulseRate
         {
             get { return _pulseRate; }
@@ -63,7 +65,7 @@ namespace SWE_Assignment
         }
 
 
-
+        //Creating an event
         public event PropertyChangedEventHandler PropertyChanged;
         private void OnPropertyChanged(string properyName)
         {
@@ -73,11 +75,12 @@ namespace SWE_Assignment
         private static Patient _instance = null;
         private static readonly object _padlock = new object();
 
+        //Declaring data fields
         Timer pulseRateTimer;
         Timer breatingRateTimer;
         Timer temperatureTimer;
         Timer bloodPressureTimer;
-        //Random rnd;
+
 
         public static Patient Instance
         {
@@ -95,7 +98,9 @@ namespace SWE_Assignment
 
         private Patient()
         {
-            //Random rnd = new Random();
+            //adding each method to their timer
+            //setting autoreset and interval
+            //getting Timer.Enabled from PatientMenu
             pulseRateTimer = new Timer();
             pulseRateTimer.AutoReset = true;
             pulseRateTimer.Interval = 1000;
@@ -118,11 +123,14 @@ namespace SWE_Assignment
 
         }
 
+        //Starts the timer or Stops the timer
         public void PL(bool srt)
         {
             pulseRateTimer.Enabled = srt;
         }
 
+        //Once timer started the method is run in 1 second intervals
+        //By (EditAlarm.plLowerLimit -5, EditAlarm.plUpperLimit +5) making sure limits are violated so that the alarm works properly 
         private void PulseRateGenerator(object sender, ElapsedEventArgs e)
         {
 
@@ -168,40 +176,6 @@ namespace SWE_Assignment
         }
 
 
-
-
-        //private static string patientName;
-        //private static string patientLastname;
-        //private static string patientGender;
-        //private static DateTime patientBirdthday;
-        //private static int patientHeight = 185;
-        //private static int patientWeight = 65;
-
-
-        //public void PatientDetailPopulator()
-        //{
-        //    //Codes to get stuff from database?
-        //    patientName = "Shayan";
-        //    PatientMenu.getPatientName = patientName;
-
-        //    //code to get lastname
-        //    patientLastname = "MHD";
-        //    PatientMenu.getPatientLastName = patientLastname;
-
-        //    patientGender = "Male";
-        //    PatientMenu.getPatientGender = patientGender;
-
-        //    patientBirdthday = new DateTime(1997, 2, 15);
-        //    PatientMenu.getPetientBD = patientBirdthday;
-
-        //    //better conversion or string builder 
-        //    patientHeight = 185;
-        //    PatientMenu.getPatientHeight = patientHeight + " Cm";
-
-        //    patientWeight = 89;
-        //    PatientMenu.getPatientWeight = patientWeight + " Kg";
-           
-        //}
 
 
        

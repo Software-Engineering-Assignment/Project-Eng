@@ -12,8 +12,10 @@ namespace SWE_Assignment
 {
     public partial class EditAlarm : Form
     {
-
+        //Implementing singleton pattern to only have one instance of the class
         private static EditAlarm _EditAlarmInstance;
+
+        //checks if there already is an instance of the class if not it creates one and returns it
         public static EditAlarm EditAlarmInstance
         {
             get
@@ -23,6 +25,8 @@ namespace SWE_Assignment
                 return _EditAlarmInstance;
             }
         }
+
+        //Declaring variables to store data
         private static int btClicked = 0;
         public static int plLowerLimit;
         public static int plUpperLimit;
@@ -38,6 +42,7 @@ namespace SWE_Assignment
 
         public EditAlarm()
         {
+            //Initialzing The controls, and setting different panels to be visible or invisible
             InitializeComponent();
             PulseRatePanel.Location = new Point(370, 135);
             BloodPressurePanle.Location = new Point(370, 135);
@@ -73,9 +78,7 @@ namespace SWE_Assignment
             UpperLimitBreathingRateBox.Clear();
             LowerLimitTemperatureBox.Clear();
             UpperLimitTemperatureBox.Clear();
-            //text = null;
-
-
+            text = null;
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -95,7 +98,7 @@ namespace SWE_Assignment
             UpperLimitBreathingRateBox.Clear();
             LowerLimitTemperatureBox.Clear();
             UpperLimitTemperatureBox.Clear();
-            //text = null;
+            text = null;
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -115,7 +118,7 @@ namespace SWE_Assignment
             UpperLimitBloodPressureBox.Clear();
             LowerLimitTemperatureBox.Clear();
             UpperLimitTemperatureBox.Clear();
-            //text = null;
+            text = null;
         }
 
         private void button4_Click(object sender, EventArgs e)
@@ -135,7 +138,7 @@ namespace SWE_Assignment
             UpperLimitBloodPressureBox.Clear();
             LowerLimitBreathingRateBox.Clear();
             UpperLimitBreathingRateBox.Clear();
-            //text = null;
+            text = null;
 
         }
 
@@ -164,64 +167,81 @@ namespace SWE_Assignment
 
         }
 
+
+        //The method will call a metheod and passes an integer to indicate which save button on which panel was clicked
+        //Then it will clear the text boxes
         private void SavePulseRateLimitButton_Click(object sender, EventArgs e)
         {
-            btClicked = 1;
-            CurrentTextBoxUpdater();
+            CurrentTextBoxUpdater(1);
             LowerLimitPulseRateBox.Clear();
             UpperLimitPulseRateBox.Clear();
-            CurrentPulseRateBox.Text = text;
         }
 
         private void SaveBloodPressureLimitButton_Click(object sender, EventArgs e)
         {
-            btClicked = 2;
-            CurrentTextBoxUpdater();
+            CurrentTextBoxUpdater(2);
             LowerLimitBloodPressureBox.Clear();
             UpperLimitBloodPressureBox.Clear();
         }
 
         private void SaveBreathingRateLimitButton_Click_1(object sender, EventArgs e)
         {
-            btClicked = 3;
-            CurrentTextBoxUpdater();
+            CurrentTextBoxUpdater(3);
             LowerLimitBreathingRateBox.Clear();
             UpperLimitBreathingRateBox.Clear();
         }
 
         private void SaveTemperatureLimitButton_Click_1(object sender, EventArgs e)
         {
-            btClicked = 4;
-            CurrentTextBoxUpdater();
+            CurrentTextBoxUpdater(4);
             LowerLimitTemperatureBox.Clear();
             UpperLimitTemperatureBox.Clear();
         }
 
-        private void CurrentTextBoxUpdater()
+
+        //Gets called whenever a save button is clicked
+        private void CurrentTextBoxUpdater(int i)
         {
-            
-            switch (btClicked)
+            //Checks which button was clicked and based on that it will call another method and passes two string parameters 
+            //If the value that was returned is equal to 1 calls a method to stores user input to the local varaible declared at the start and also it set the textbox to to text otherwise do nothing
+            switch (i)
             {
                 case 1:
-                    TryToParse(LowerLimitPulseRateBox.Text, UpperLimitPulseRateBox.Text);
-                    //CurrentPulseRateBox.Text = text;
+
+                    if (TryToParse(LowerLimitPulseRateBox.Text, UpperLimitPulseRateBox.Text) == 1)
+                    {
+                        SetLimitValues(1);
+                        CurrentPulseRateBox.Text = text;
+                    }
                     break;
                 case 2:
-                    TryToParse(LowerLimitBloodPressureBox.Text, UpperLimitBloodPressureBox.Text);
-                    CurrentBloodPressureBox.Text = text;
+                    if (TryToParse(LowerLimitBloodPressureBox.Text, UpperLimitBloodPressureBox.Text) == 1)
+                    {
+                        SetLimitValues(2);
+                        CurrentBloodPressureBox.Text = text;
+                    }
                     break;
                 case 3:
-                    TryToParse(LowerLimitBreathingRateBox.Text, UpperLimitBreathingRateBox.Text);
-                    CurrentBreathingRateBox.Text = text; 
+                    if (TryToParse(LowerLimitBreathingRateBox.Text, UpperLimitBreathingRateBox.Text) == 1)
+                    {
+                        SetLimitValues(3);
+                        CurrentBreathingRateBox.Text = text;
+                    }
                     break;
                 case 4:
-                    TryToParse(LowerLimitTemperatureBox.Text, UpperLimitTemperatureBox.Text);
-                    CurrentTemperatureBox.Text = text;
+                    if (TryToParse(LowerLimitTemperatureBox.Text, UpperLimitTemperatureBox.Text) == 1)
+                    {
+                        SetLimitValues(4);
+                        CurrentTemperatureBox.Text = text;
+                    }
                     break;
             }
         }
 
-        private void TryToParse(string a, string b)
+        //The method will gets the passed parameters and sets them to lowerLimit, upperLimit
+        //TryParse will return a boolean value if it is able to parse otherwise it will return false
+        //If TryParse fails means user input is invalid, if it suceed but lower limit is bigger than upper limit if fails
+        private int TryToParse(string a, string b)
         {
             
             bool result1 = Int32.TryParse(a, out lowerLimit);
@@ -230,25 +250,26 @@ namespace SWE_Assignment
             if (result1 == false || result2 == false)
             {
                 MessageBox.Show("Please enter valid numbers", "invalid input", MessageBoxButtons.OK);
-               // return null;
+                return 0;
 
             } else if (lowerLimit >= upperLimit)
             {
                 MessageBox.Show("Please Make sure lower limit is smaller than upper limit", "invalid input", MessageBoxButtons.OK);
-                //return null;
+                return 0;
             } else
             {
                 text = lowerLimit.ToString() + "      " + upperLimit.ToString();
-                SetLimitValues();
-                //return text;
+                
+                return 1;
             }
 
         }
 
-        private void SetLimitValues()
+        //Method is called inside another method and it stores the user input to to the local variables
+        private void SetLimitValues(int i)
         {
 
-                switch (btClicked)
+                switch (i)
                 {
                     case 1:
                         Int32.TryParse(LowerLimitPulseRateBox.Text, out plLowerLimit);
@@ -273,38 +294,10 @@ namespace SWE_Assignment
 
         }
 
-        public void SetDefaultAlarm(int i)
-        {
-            switch (i)
-            {
-                case 1:
-                    DefaultAlarmUpdater(1);
-                    break;
-                case 2:
-                    DefaultAlarmUpdater(2);
-                    break;
-                case 3:
-                    DefaultAlarmUpdater(3);
-                    break;
-                case 4:
-                    DefaultAlarmUpdater(4);
-                    break;
-                case 5:
-                    DefaultAlarmUpdater(5);
-                    break;
-                case 6:
-                    DefaultAlarmUpdater(6);
-                    break;
-                case 7:
-                    DefaultAlarmUpdater(7);
-                    break;
-                case 8:
-                    DefaultAlarmUpdater(8);
-                    break;
-            }
-        }
-        
-        private void DefaultAlarmUpdater(int i)
+
+        //This method is called from PatientSelection form
+        //The method calls the PatientUpdater method in the DataHandler class and it gets the relevant rows to the patinet's lower limit and upper limit
+        public void DefaultAlarmUpdater(int i)
         {
             DataTable dataTable = DataHandler.Instance.PatientUpdater(i);
             CurrentPulseRateBox.Text = dataTable.Rows[0][8].ToString() + "       " + dataTable.Rows[0][9].ToString();

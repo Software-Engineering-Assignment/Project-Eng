@@ -64,7 +64,7 @@
             this.label1.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(43, 19);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(152, 24);
+            this.label1.Size = new System.Drawing.Size(124, 19);
             this.label1.TabIndex = 15;
             this.label1.Text = "Patient Selection";
             // 
@@ -313,7 +313,7 @@
             // 
             // PatientSelection
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 18F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 14F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(820, 417);
             this.Controls.Add(this.label1);
@@ -331,7 +331,7 @@
             this.MaximizeBox = false;
             this.Name = "PatientSelection";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Form2";
+            this.Text = "Bay";
             this.Load += new System.EventHandler(this.Form2_Load);
             this.panel8.ResumeLayout(false);
             this.panel7.ResumeLayout(false);

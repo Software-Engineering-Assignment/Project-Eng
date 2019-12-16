@@ -116,6 +116,8 @@ namespace SWE_Assignment
 
         }
 
+
+        //This method is used inside PatientMenu and EditAlarm to get the patient details and patient default lower and upper limits respectively and it returns a table 
         public DataTable PatientUpdater(int i)
         {
             DataTable table = new DataTable();
@@ -127,25 +129,5 @@ namespace SWE_Assignment
             return table;
         }
 
-        //public void GetPatientInfo(ref Bed patient, int patientNumber)
-        //{
-        //    string query = "SELECT Patient_Name, Bedside_No, Age, Gender, Last_Name, NHS_Number FROM Patient WHERE Bedside_No = '{patientNumber}'";
-
-        //    openConnection();
-
-        //    SqlCommand command = new SqlCommand(query, sqlconnector);
-
-        //    using (SqlDataReader dataReader = command.ExecuteReader())
-        //    {
-        //        if (dataReader.Read())
-        //        {
-        //            patient.PatientName = dataReader.GetString(0);
-        //            patient.BedsideNo = dataReader.GetInt32(1);
-        //            patient.Age = dataReader.GetInt32(2);
-        //            patient.Gender = dataReader.GetString(3);
-
-        //        }
-        //    }
-        //}
     }
 }

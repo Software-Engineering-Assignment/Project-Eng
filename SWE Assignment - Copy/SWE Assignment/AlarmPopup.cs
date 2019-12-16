@@ -12,8 +12,10 @@ namespace SWE_Assignment
 {
     public partial class AlarmPopup : Form
     {
-
+        //Implementing singleton pattern to only have one instance of the class
         private static AlarmPopup _AlarmInstance;
+
+        //checks if there already is an instance of the class if not it creates one and returns it
         public static AlarmPopup AlarmInstance
         {
             get
@@ -25,6 +27,7 @@ namespace SWE_Assignment
         }
         public AlarmPopup()
         {
+            //Makes Sure the alarm notification is top most of screen
             InitializeComponent();
             this.TopMost = true;
         }
@@ -50,8 +53,11 @@ namespace SWE_Assignment
             this.Hide();
         }
 
+
+
         public void RaiseAlarm(int i)
         {
+            //Checks tha passed value and Raises the relevant alarm
             switch (i)
             {
                 case 1:

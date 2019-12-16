@@ -15,11 +15,12 @@ using System.Data.SqlClient;
 namespace SWE_Assignment
 {
 
-    //Once Random number gens work define some logic to change the text box color if our random number is close to upper or lower limit
     public partial class PatientMenu : Form
     {
-
+        //Implementing singleton pattern to only have one instance of the class
         private static PatientMenu _PatientMenuInstance;
+
+        //checks if there already is an instance of the class if not it creates one and returns it
         public static PatientMenu PatientMenuInstance
         {
             get
@@ -30,17 +31,12 @@ namespace SWE_Assignment
             }
         }
 
+        //sets the instance of the Patient to the newPatient
+        //Create a new instance of alarm
         Patient newPatient = Patient.Instance;
         Alarm newAlarm = new Alarm();
-        public static string getPatientName; 
-        public static string getPatientLastName;
-        public static string getPatientGender;
-        public static DateTime getPetientBD;
-        public static string getPatientHeight;
-        public static string getPatientWeight;
-        public static string update;
 
-        
+        //declaring boolean variables
         public static bool pulseRateOn = false;
         public static bool bloodPressureOn = false;
         public static bool breathingRateOn = false;
@@ -50,20 +46,11 @@ namespace SWE_Assignment
         public PatientMenu()
         {
             InitializeComponent();
+            //Subscribing to the PropertyChanged event inside the Patient class
+            //It will notify the _TextBox_PropertyChanged everytime the event in being triggered 
             newPatient.PropertyChanged += _TextBox_PropertyChanged;
-            //newPatient.PatientDetailPopulator();
-            PatientFirstNameBox.Text = getPatientName;
-            PatientLastNameBox.Text = getPatientLastName;
-            PatientGenderBox.Text = getPatientGender;
-            PatientDateofBirthBox.Text = getPetientBD.ToString();
-            PatientHeightBox.Text = getPatientHeight;
-            PatientWeightBox.Text = getPatientWeight;
 
-            
-
-            //label1.Text = PatientSelection.labelText;
-
-
+            //Setting default values 
             panel14.Location = new Point(0, 0);
             panel9.Location = new Point(0, 0);
             panel8.Location = new Point(0, 0);
@@ -88,7 +75,7 @@ namespace SWE_Assignment
         }
 
         
-
+        //Setting different panels to visible or invisible based on user button click 
         private void button1_Click(object sender, EventArgs e)
         {
             panel2.Visible = true;
@@ -154,9 +141,10 @@ namespace SWE_Assignment
         private void button5_Click(object sender, EventArgs e)
         {
 
-
+            //Calls a method to make sure all modules are off before letting the user to proceed
             if (CheckModules() == 1)
             {
+                //If true hide the form and get the PatientSelection instance and show
                 this.Hide();
                 panel2.Visible = true;
                 panel3.Visible = true;
@@ -169,26 +157,37 @@ namespace SWE_Assignment
                 panel9.Visible = false;
                 panel14.Visible = false;
                 panel15.Visible = true;
+                richTextBox1.Clear();
                 PatientSelection.PatientSelectionInstance.Show();
             }
             else
             {
+                //If false prompt the user with an error message
                 MessageBox.Show("Dear User, Please Make sure all modules are turned off");
             }
             
            
         }
         
+        //If the user clicks on "ON" button for pulse rate module
         private void button6_Click(object sender, EventArgs e)
         {
+            //Change the image of the picturebox and change the text of the textbox
+            //Set the pulseRateOn to true so that CheckModules() work as intended
+            //Call the method inside the Patient class and pass True so that it starts generating random numbers
             PulseRatePicturebox.Image = Properties.Resources.connection_status_on;
             textBox15.Text = "Pulse rate module is on";
             pulseRateOn = true;
             newPatient.PL(true);
         }
 
+        //If the user clicks on "OFF" button for pulse rate module
         private void PulseRateOffButton_Click(object sender, EventArgs e)
         {
+            //Change the image of the picturebox and change the text of the textbox
+            //Set the pulseRateOn to true so that CheckModules() work as intended
+            //Call the method inside the Patient class and pass False so that it stops generating random numbers
+            //Clear the textbox
             PulseRatePicturebox.Image = Properties.Resources.connection_status_off;
             textBox15.Text = "Pulse rate module is off";
             pulseRateOn = false;
@@ -258,36 +257,41 @@ namespace SWE_Assignment
 
 
 
-
+        //A method to check if there is any module "ON"  
         private int CheckModules()
         {
-            int proceed;
             do
             {
                 if (pulseRateOn || bloodPressureOn || breathingRateOn || temperatureOn == true)
                 {
                     
-                    return proceed = 0;
+                    return 0;
                 }
 
             } while (pulseRateOn && bloodPressureOn && breathingRateOn && temperatureOn == false);
 
-            return proceed = 1;   
+            return 1;   
             
         }
 
+
+        //If the user click on the read from CSV file button
         private void ReadFromCsvButton_Click(object sender, EventArgs e)
         {
+            //call the method
             RichBoxPopulator();   
         }
 
 
-        //dont let the dialog accept every type
+        
         private string RichBoxPopulator()
         {
+            //Makes sure the user is only able to select a CSV file 
             openFileDialog1.Filter = "CSV Files (*.csv)|*.csv";
             DialogResult result = openFileDialog1.ShowDialog();
             
+            //It will checks the results and will fill the text box with text from CSV file
+            //If user close the FileDialog it will return null to stop program from throwing exception
             if (result == DialogResult.OK)
             {
                 string filename = openFileDialog1.FileName;
@@ -328,12 +332,18 @@ namespace SWE_Assignment
         }
 
 
+
         //https://stackoverflow.com/questions/12837305/cross-thread-operation-not-valid-how-to-access-winform-elements-from-another-mo/12837412
 
+
+            //This methods listens to the events that being triggered by the changes in the properties inside the patient class
         void _TextBox_PropertyChanged(object sender, PropertyChangedEventArgs e)
         {
+            //Switch statement to figure out which properies caused the event to be triggered
             switch (e.PropertyName)
             {
+                //If the event is being triggered by PulseRate property value change get the new value and set it to the textbox
+                //Call the PulseRateAlarm method in the alarm calss and pass the new value to being checked
                 case "PulseRate":
                     this.Invoke(new MethodInvoker(delegate ()
                     {
@@ -368,38 +378,9 @@ namespace SWE_Assignment
             }
         }
 
-        public void PatientMenueUpdater(int i)
-        {
-            switch (i)
-            {
-                case 1:
-                    ControlUpdater(1);
-                    break;
-                case 2:
-                    ControlUpdater(2);
-                    break;
-                case 3:
-                    ControlUpdater(3);
-                    break;
-                case 4:
-                    ControlUpdater(4);
-                    break;
-                case 5:
-                    ControlUpdater(5);
-                    break;
-                case 6:
-                    ControlUpdater(6);
-                    break;
-                case 7:
-                    ControlUpdater(7);
-                    break;
-                case 8:
-                    ControlUpdater(8);
-                    break;
-            }
-        }
-
-        private void ControlUpdater(int i)
+        //This method is used to be called from the Patient Selection form, and it will updates the UI controls based on the selected patient
+        //The method calls a mthod inside the DataHandler class that itself returns a DataTable 
+        public void ControlUpdater(int i)
         {
             DataTable dataTable = DataHandler.Instance.PatientUpdater(i);
             PatientFirstNameBox.Text = dataTable.Rows[0][0].ToString();
